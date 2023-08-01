@@ -1,0 +1,54 @@
+.container-fluid {
+  max-width: 1320px;
+}
+.bg-deco {
+  background: no-repeat right 0 / contain url("/assets/images/deco.png");
+  filter: drop-shadow($box-shadow-lg);
+}
+.bg-deco-reverse {
+  background: no-repeat left 0 / contain url("/assets/images/deco-reverse.png");
+  filter: drop-shadow($box-shadow-lg);
+}
+
+.glass {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pb-240 {
+  padding-bottom: 240px;
+}
+.mt-140 {
+  margin-top: 140px;
+}
+.mb-80 {
+  margin-bottom: 80px;
+}
+.mb-120 {
+  margin-bottom: 120px;
+}
+.list-style-circle {
+  list-style-type: circle;
+}
+.row-gap-6 {
+  row-gap: 24px;
+}
+.drop-shadow {
+  filter: drop-shadow($box-shadow);
+  &-lg {
+    filter: drop-shadow($box-shadow-lg);
+  }
+}
+.horizontal-flip {
+  transform: rotateY(-180deg);
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+.py-160 {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}

@@ -1,3 +1,90 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  background: no-repeat center/cover url("/assets/images/banner.png");
+  height: 890px;
+  filter: drop-shadow(0 30px 50px $black-transparent);
+  h1 {
+    font-size: 112px;
+    font-weight: 900;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 5px $white;
+  }
+  @include pad {
+    background: no-repeat 20% 50% / cover url("/assets/images/banner.png");
+    &-title {
+      margin-top: 400px;
+    }
+  }
+  @include mobile {
+    background: no-repeat center/cover url("/assets/images/banner-sm.png");
+    height: 700px;
+    h1 {
+      font-size: 60px;
+    }
+    &-title {
+      margin-top: 280px;
+    }
+  }
+  @include mobile-po {
+    height: 400px;
+    &-title {
+      margin-top: 140px;
+    }
+  }
+}
+.intro {
+  &-img {
+    filter: brightness(1);
+    transition: filter 0.3s;
+  }
+  &-desc {
+    opacity: 0;
+    top: 45%;
+    transition: opacity 0.3s;
+  }
+  &-title {
+    transition: all 0.3s;
+  }
+  &-item {
+    z-index: 1;
+    &:hover {
+      .intro {
+        &-img {
+          filter: brightness(0.4);
+        }
+        &-desc {
+          opacity: 1;
+        }
+        &-title {
+          top: 30% !important;
+        }
+      }
+    }
+  }
+}
+@include pad {
+  .intro {
+    &-img {
+      filter: brightness(0.4);
+    }
+    &-desc {
+      opacity: 1;
+    }
+    &-title {
+      top: 30% !important;
+    }
+  }
+}
+.line {
+  width: 1px;
+  height: 60px;
+  background: $white;
+}
+.steps {
+  &-content {
+    @include pad {
+      position: absolute;
+      z-index: 1;
+    }
+  }
 }
