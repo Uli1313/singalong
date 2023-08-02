@@ -9,15 +9,18 @@
       rel="stylesheet"
     />
     <title>SINGALONG</title>
-    <script type="module" crossorigin src="/singalong/assets/main-cfa771ce.js"></script>
-    <link rel="stylesheet" href="/singalong/assets/main-7d08ca3b.css">
+    <script type="module" crossorigin src="/singalong/assets/main-90a9d54e.js"></script>
+    <link rel="stylesheet" href="/singalong/assets/main-48e9fc57.css">
   </head>
   <body>
     <!-- header -->
     <div class="bg-primary-dark">
       <header>
-        <div class="banner mb-120">
-          <nav class="navbar navbar-expand-md navbar-dark bg-tranparent">
+        <div class="banner mb-120 overflow-hidden">
+          <!-- nav 下 position-relative 來避免被 banner-group 覆蓋的問題 -->
+<nav
+  class="navbar navbar-expand-md navbar-dark bg-tranparent position-relative"
+>
   <div class="container-fluid">
     <a class="navbar-brand" href="#">SINGALONG</a>
     <button
@@ -63,12 +66,37 @@
     </div>
   </div>
 </nav>
-          <div class="banner-title container-fluid text-end mt-140">
-            <h1>SINGALONG</h1>
-            <h2 class="mb-1">尋找一起唱歌的夥伴</h2>
-            <a href="##" class="btn btn-light text-primary rounded-pill"
-              >看看目前的揪團</a
+          <div class="container-fluid">
+            <div class="banner-group position-relative overflow-hidden">
+              <div class="banner-img-1 position-absolute">
+                <img
+                  src="/singalong/assets/banner-1-dca909b2.png"
+                  alt="多張人物圖像"
+                  class="drop-shadow"
+                />
+              </div>
+              <div class="banner-img-2 position-absolute">
+                <img
+                  src="/singalong/assets/banner-2-bc1ecb58.png"
+                  alt="多張人物圖像"
+                  class="drop-shadow-lg"
+                />
+              </div>
+              <div class="banner-img-3 position-absolute">
+                <img
+                  src="/singalong/assets/banner-3-d4e3ef84.png"
+                  alt="多張人物圖像"
+                  class="drop-shadow"
+                />
+              </div>
+            </div>
+            <!-- <div
+              class="banner-content position-absolute end-0 top-50 translate-middle-y py-160 ps-80"
             >
+              <h1>SINGALONG</h1>
+              <h2 class="mb-6">尋找一起唱歌的夥伴</h2>
+              <a href="##" class="btn btn-major rounded-pill">看看目前的揪團</a>
+            </div> -->
           </div>
         </div>
       </header>
@@ -237,7 +265,7 @@
                     alt="人物圖片"
                     class="mb-120 drop-shadow-lg mb-md-160"
                   /><img
-                    src="../assets/images/section5-2.png "
+                    src="/singalong/assets/section5-2-d7c89e2d.png"
                     alt="人物圖片"
                     class="drop-shadow mb-8 mb-md-0"
                   />
