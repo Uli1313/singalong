@@ -100,7 +100,7 @@
           </ul>
         </section>
         <!-- steps -->
-        <section class="steps bg-deco py-160 mb-120">
+        <section class="steps bg-deco py-160 py-md-80 mb-240 mb-sm-120">
           <div class="container-fluid position-relative">
             <div class="row">
               <div
@@ -137,7 +137,7 @@
           </div>
         </section>
         <!-- same -->
-        <section class="same bg-deco-reverse py-160">
+        <section class="same bg-deco-reverse py-160 py-md-80 mb-120 mb-0">
           <div class="container-fluid">
             <div class="row align-items-center">
               <div
@@ -148,7 +148,9 @@
                   在用戶歌本頁面，點擊「一鍵查看相同歌曲」，尋找喜好相近的夥伴，一起點亮友情的火花！
                 </p>
               </div>
-              <div class="col-12 col-lg-7 position-relative order-lg-0">
+              <div
+                class="col-10 col-sm-8 col-lg-7 position-relative mx-auto mx-sm-0 order-lg-0"
+              >
                 <img
                   src="../assets/images/section4-1.png"
                   alt="相同歌曲列表"
@@ -171,10 +173,54 @@
             </div>
           </div>
         </section>
+        <!-- call to action -->
+        <section
+          class="cta bg-deco py-160 py-md-80 mb-sm-60 mb-120 position-relative"
+        >
+          <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+              <div
+                class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 row flex-wrap order-xl-1"
+              >
+                <div
+                  class="col-12 col-md-11 d-flex justify-content-between align-items-center ms-auto"
+                >
+                  <img
+                    src="../assets/images/section5-1.png"
+                    alt="人物圖片"
+                    class="mb-120 drop-shadow-lg mb-md-160"
+                  /><img
+                    src="../assets/images/section5-2.png "
+                    alt="人物圖片"
+                    class="drop-shadow mb-8 mb-md-0"
+                  />
+                </div>
+                <div
+                  class="col-12 col-md-11 d-flex justify-content-between align-items-center"
+                >
+                  <img
+                    src="../assets/images/section5-3.png"
+                    alt="人物圖片"
+                    class="drop-shadow"
+                  /><img
+                    src="../assets/images/section5-4.png"
+                    alt="人物圖片"
+                    class="cta-img-4 mb-160 drop-shadow-lg"
+                  />
+                </div>
+              </div>
+              <div
+                class="cta-title col-12 col-xl-4 col-xxl-5 mb-10 mb-xl-0 text-center order-xl-0"
+              >
+                <h2 class="mb-4">馬上來尋找你的歌友吧！</h2>
+                <a href="##" class="btn btn-major rounded-pill">立即註冊</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <%- include('./layout/footer'); -%>
     </div>
-
-    <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
   </body>
