@@ -1,7 +1,40 @@
+// .banner {
+//   background: no-repeat center/cover url("/assets/images/banner.png");
+//   height: 890px;
+//   filter: drop-shadow(0 30px 50px $black-transparent);
+//   h1 {
+//     font-size: 112px;
+//     font-weight: 900;
+//     line-height: 1;
+//     color: transparent;
+//     -webkit-text-stroke: 5px $white;
+//   }
+//   @include pad {
+//     background: no-repeat 20% 50% / cover url("/assets/images/banner.png");
+//     &-title {
+//       margin-top: 400px;
+//     }
+//   }
+//   @include mobile {
+//     background: no-repeat center/cover url("/assets/images/banner-sm.png");
+//     height: 700px;
+//     h1 {
+//       font-size: 60px;
+//     }
+//     &-title {
+//       margin-top: 280px;
+//     }
+//   }
+//   @include mobile-po {
+//     height: 400px;
+//     &-title {
+//       margin-top: 140px;
+//     }
+//   }
+// }
 .banner {
-  background: no-repeat center/cover url("/assets/images/banner.png");
-  height: 890px;
-  filter: drop-shadow(0 30px 50px $black-transparent);
+  height: 100vh;
+  background: $primary-gradient;
   h1 {
     font-size: 112px;
     font-weight: 900;
@@ -9,26 +42,54 @@
     color: transparent;
     -webkit-text-stroke: 5px $white;
   }
+  &-group {
+    // 1. 子層含有 position-absolute，使其高度 = 0，所以也要指定高度
+    // 2. 有設定 rotate，在高度只有 100 vh 的情況下，畫面上會出現空白，
+    // 所以多 30 vh 去填滿空白，並使用 top 負值來把上方空白也填滿
+    top: -15vh;
+    height: 130vh;
+    transform: rotate(10deg);
+  }
+  &-img-1 {
+    animation: scroll-6px 5s linear infinite paused;
+  }
+  &-img-2 {
+    animation: scroll-10px 8s -1s linear infinite reverse paused;
+    left: 25%;
+  }
+  &-img-3 {
+    animation: scroll-6px 6s -1.5s linear infinite paused;
+    left: 50%;
+  }
+  &-content {
+    top: 120px;
+    width: 60%;
+    background: linear-gradient(to left, rgba($black, 0.7) 90%, transparent);
+  }
+  @include pad-ls {
+    &-img-1,
+    &-img-2,
+    &-img-3 {
+      width: 20%;
+    }
+  }
   @include pad {
-    background: no-repeat 20% 50% / cover url("/assets/images/banner.png");
-    &-title {
-      margin-top: 400px;
+    &-img-1,
+    &-img-2,
+    &-img-3 {
+      width: 30%;
+    }
+    &-img-2 {
+      left: 35%;
+    }
+    &-img-3 {
+      left: 70%;
     }
   }
   @include mobile {
-    background: no-repeat center/cover url("/assets/images/banner-sm.png");
-    height: 700px;
-    h1 {
-      font-size: 60px;
-    }
-    &-title {
-      margin-top: 280px;
-    }
-  }
-  @include mobile-po {
-    height: 400px;
-    &-title {
-      margin-top: 140px;
+    height: 50vh;
+    &-group {
+      right: 5%;
     }
   }
 }

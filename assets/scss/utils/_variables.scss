@@ -309,6 +309,7 @@ $dark: $gray-900 !default;
 $tertiary: #45009c; // custom
 $primary-dark: #16132d; // custom
 $black-transparent: rgba($black, 0.5);
+$primary-gradient: linear-gradient(45deg, $secondary, $primary);
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
