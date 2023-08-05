@@ -308,8 +308,12 @@ $light: $gray-100 !default;
 $dark: $gray-900 !default;
 $tertiary: #45009c; // custom
 $primary-dark: #16132d; // custom
+$primary-medium: #2a2740; // custom
+$primary-light: #777393; // custom
 $black-transparent: rgba($black, 0.5);
 $primary-gradient: linear-gradient(45deg, $secondary, $primary);
+$secondary-gradient: linear-gradient(to right, $primary, $tertiary);
+$secondary-gradient-bottom: linear-gradient(to bottom, $primary, $tertiary);
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -325,6 +329,8 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
   "primary-dark": #16132d,
+  "primary-medium": #2a2740,
+  "primary-light": #777393,
 ) !default;
 // scss-docs-end theme-colors-map
 

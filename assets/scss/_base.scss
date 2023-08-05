@@ -8,7 +8,8 @@ img {
   vertical-align: middle;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -29,4 +30,8 @@ h6,
 p {
   margin-bottom: 0;
   line-height: 1.5;
+}
+
+textarea {
+  resize: none;
 }

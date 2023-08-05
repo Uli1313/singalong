@@ -18,3 +18,16 @@
     @content;
   }
 }
+
+@mixin bg-cover($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin bg-contain($url) {
+  background-image: url($url);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

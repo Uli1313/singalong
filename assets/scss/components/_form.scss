@@ -1,0 +1,41 @@
+.input-group-text,
+.form-select,
+.form-control,
+.form-control:focus,
+.form-select:focus {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid $primary-light;
+}
+.input-group-text {
+  color: $primary-light;
+  border: none;
+}
+.form-control,
+.form-control:focus,
+.form-select:focus {
+  color: $white;
+}
+.form-select option {
+  color: $black;
+}
+.form-check {
+  margin-bottom: 0;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 36px;
+}
+.form-select-default {
+  color: #6c757d;
+}
+.form-select-changed {
+  color: $white;
+}
+.form-select {
+  padding-right: 0;
+}
+input:-internal-autofill-selected {
+  background-color: $primary-dark !important;
+}

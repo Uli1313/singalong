@@ -1,0 +1,14 @@
+.progress {
+  &-circle {
+    width: 48px;
+    height: 48px;
+    background: $primary-medium;
+    line-height: 48px;
+    &.active {
+      background: $secondary-gradient;
+    }
+  }
+  &-list {
+    top: -24px;
+  }
+}

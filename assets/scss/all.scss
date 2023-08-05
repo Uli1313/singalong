@@ -5,13 +5,19 @@
 
 @import "./utils/variables";
 @import "./utils/mixin";
-@import "./utils/utilities";
+@import "./utils/animations";
 @import "../../node_modules/bootstrap";
+@import "./utils/custom-utilities";
+@import "./utils/utilities";
 
 @import "./components/button";
+@import "./components/progress";
+@import "./components/form";
+
 @import "./base";
-@import "./utils/animations";
+
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
 @import "./pages/index.scss";
+@import "./pages/create";
