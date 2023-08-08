@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
+    <title>揪團列表 | SINGALONG</title>
+  </head>
+  <body>
+    <div class="bg-primary-dark">
+      <div class="subbanner overflow-hidden position-relative mb-10">
+        <%- include('./layout/header'); -%>
+        <div
+          class="subbanner-content bg-right-black-gradient position-absolute top-50 translate-middle-y"
+        >
+          <h2
+            class="position-absolute top-50 start-50 translate-middle ms-md-9"
+          >
+            揪團列表
+          </h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-10"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">揪團列表</li>
+          </ol>
+        </nav>
+        <!-- main -->
+        <main>
+          <!-- search -->
+
+          <div class="row position-relative">
+            <div class="meetup-filter col-lg-3 py-4 bg-primary-dark rounded-4">
+              <p
+                class="d-none d-sm-block pb-6 mb-4 border-bottom border-primary-light fs-5 text-center"
+              >
+                條件篩選
+              </p>
+              <p class="d-sm-none meetup-filter-label">
+                篩選
+                <span class="meetup-filter-icon-back material-icons">
+                  arrow_back
+                </span>
+                <span class="meetup-filter-icon-forward material-icons d-none">
+                  arrow_forward
+                </span>
+              </p>
+              <div class="row d-lg-block">
+                <div class="col-sm-4 col-lg-12 mb-2">
+                  <p class="text-primary-light mb-1">地區</p>
+                  <div class="dropdown w-100">
+                    <a
+                      class="dropdown-toggle border border-primary-light py-3 px-4 rounded-3 text-white w-100 d-flex justify-content-between align-items-center"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      全部<span class="material-icons"> expand_more </span>
+                    </a>
+                    <ul
+                      class="dropdown-menu meetup-filter-aria"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <li><a class="dropdown-item" href="#">台北市</a></li>
+                      <li><a class="dropdown-item" href="#">新北市</a></li>
+                      <li><a class="dropdown-item" href="#">基隆市</a></li>
+                      <li><a class="dropdown-item" href="#">桃園市</a></li>
+                      <li><a class="dropdown-item" href="#">新竹市</a></li>
+                      <li><a class="dropdown-item" href="#">新竹縣</a></li>
+                      <li><a class="dropdown-item" href="#">苗栗縣</a></li>
+                      <li><a class="dropdown-item" href="#">台中市</a></li>
+                      <li><a class="dropdown-item" href="#">彰化縣</a></li>
+                      <li><a class="dropdown-item" href="#">南投縣</a></li>
+                      <li><a class="dropdown-item" href="#">雲林縣</a></li>
+                      <li><a class="dropdown-item" href="#">嘉義市</a></li>
+                      <li><a class="dropdown-item" href="#">嘉義縣</a></li>
+                      <li><a class="dropdown-item" href="#">台南市</a></li>
+                      <li><a class="dropdown-item" href="#">高雄市</a></li>
+                      <li><a class="dropdown-item" href="#">屏東縣</a></li>
+                      <li><a class="dropdown-item" href="#">台東縣</a></li>
+                      <li><a class="dropdown-item" href="#">花蓮縣</a></li>
+                      <li><a class="dropdown-item" href="#">宜蘭縣</a></li>
+                      <li><a class="dropdown-item" href="#">金門縣</a></li>
+                      <li><a class="dropdown-item" href="#">連江縣</a></li>
+                      <li><a class="dropdown-item" href="#">澎湖縣</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-lg-12 mb-2">
+                  <p class="text-primary-light mb-1">KTV種類</p>
+                  <div class="dropdown w-100">
+                    <a
+                      class="dropdown-toggle border border-primary-light py-3 px-4 rounded-3 text-white w-100 d-flex justify-content-between align-items-center"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      全部<span class="material-icons"> expand_more </span>
+                    </a>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <li><a class="dropdown-item" href="#">國語KTV</a></li>
+                      <li><a class="dropdown-item" href="#">外語KTV</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-lg-12 mb-6">
+                  <p class="text-primary-light mb-1">日期</p>
+                  <div class="dropdown w-100">
+                    <a
+                      class="dropdown-toggle border border-primary-light py-3 px-4 rounded-3 text-white w-100 d-flex justify-content-between align-items-center"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      由近至遠<span class="material-icons"> expand_more </span>
+                    </a>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <li><a class="dropdown-item" href="#">由近至遠</a></li>
+                      <li><a class="dropdown-item" href="#">由遠至近</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div
+                    class="d-flex align-items-center border border-primary-light rounded-2"
+                  >
+                    <input type="search" class="form-control border-0" />
+                    <span class="material-icons px-4 pointer"> search </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="meetup-event col-lg-9">
+              <ul
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-6 mb-12"
+              >
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+                <li class="col">
+                  <div
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                  >
+                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <div class="card-body bg-primary-medium">
+                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                      <div class="d-flex mb-1">
+                        <span class="material-icons me-2"> schedule </span>
+                        <p>07 /14 (四) 13:00 - 16:00</p>
+                      </div>
+                      <div class="d-flex">
+                        <span class="material-icons me-2"> location_on </span>
+                        <p>錢櫃 - 台北林森店</p>
+                      </div>
+                    </div>
+                    <a
+                      href="meetup-information.html"
+                      class="stretched-link"
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+      <%- include('./layout/footer'); -%>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iscroll/5.2.0/iscroll.min.js"></script> -->
+    <script>
+      const meetupFilter = document.querySelector(".meetup-filter");
+      const meetupFilterLabel = document.querySelector(".meetup-filter-label");
+      const meetupFilterBack = document.querySelector(
+        ".meetup-filter-icon-back"
+      );
+      const meetupFIlterForward = document.querySelector(
+        ".meetup-filter-icon-forward"
+      );
+      const meetupEvent = document.querySelector(".meetup-event");
+      let isMoved = false;
+
+      meetupFilterLabel.addEventListener("click", function () {
+        if (isMoved) {
+          meetupFilter.style.left = "100%";
+          meetupFilterBack.style.display = "inline-block";
+          meetupFIlterForward.style.display = "none";
+          meetupEvent.style.pointerEvents = "auto";
+          isMoved = false;
+        } else {
+          meetupFilter.style.left = "20%";
+          meetupFilterBack.style.display = "none";
+          meetupFIlterForward.style.setProperty(
+            "display",
+            "block",
+            "important"
+          );
+          meetupEvent.style.pointerEvents = "none";
+          isMoved = true;
+        }
+      });
+
+      // function loaded() {
+      //   myScroll = new IScroll(".meetup-filter-aria", {
+      //     mouseWheel: true, // 允許滑鼠滾輪滾動
+      //     scrollbars: true, // 顯示滾動條
+      //     interactiveScrollbars: true, // 允許使用手指拖動滾動條
+      //     shrinkScrollbars: "scale",
+      //     fadeScrollbars: true,
+      //   });
+      // }
+    </script>
+  </body>
+</html>

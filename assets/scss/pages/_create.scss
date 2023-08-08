@@ -10,6 +10,7 @@
 .subbanner {
   height: 40vh;
   &-content {
+    height: 20vh;
     width: 40%;
   }
   @include mobile {
@@ -30,18 +31,19 @@
   }
 }
 
+.create-img,
 .upload-img {
   width: 150px;
   height: 150px;
-  &-icon {
-    width: 60px;
-    height: 60px;
-  }
-}
-.create-img,
-.upload-img {
   @include mobile {
     width: 100px;
     height: 100px;
+  }
+}
+
+.upload-img {
+  &-icon {
+    width: 60px;
+    height: 60px;
   }
 }

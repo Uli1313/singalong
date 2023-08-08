@@ -36,6 +36,15 @@
 .form-select {
   padding-right: 0;
 }
-input:-internal-autofill-selected {
-  background-color: $primary-dark !important;
+input {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    // 更改自動填入背景色、文字顏色
+    box-shadow: inset 0 0 0 1000px $primary-dark;
+    -webkit-text-fill-color: white;
+  }
+}
+input::placeholder {
+  -webkit-text-fill-color: #6c757d;
 }

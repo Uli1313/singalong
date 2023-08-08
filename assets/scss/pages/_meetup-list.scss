@@ -1,0 +1,33 @@
+.meetup {
+  &-filter {
+    a {
+      text-decoration: none;
+    }
+    @include mobile-po {
+      position: fixed;
+      top: 40vh;
+      left: 100%;
+      width: 80%;
+      z-index: 1;
+      border: 2px solid $primary-light;
+      transition: left 0.5s;
+      &-label {
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        padding: 16px 4px 8px 4px;
+        text-align: center;
+        background: $primary-dark;
+        border: 2px solid $primary-light;
+        border-radius: 16px 0 0 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.meetup-filter-aria {
+  max-height: 40vh;
+  overflow-y: auto;
+  //   -webkit-overflow-scrolling: touch; /* 允許平滑滾動 */
+  //   touch-action: pan-y; /* 允許垂直方向的手指拖動滾動 */
+}
