@@ -17,3 +17,11 @@
     transform: translateY(calc(-50% - 10px));
   }
 }
+@keyframes luster {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 130%;
+  }
+}

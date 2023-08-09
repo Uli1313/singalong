@@ -1,0 +1,27 @@
+.meetup {
+  &-intro,
+  &-comment {
+    min-height: 360px;
+  }
+  &-comment {
+    &-user {
+      height: 48px;
+      width: 48px;
+    }
+    &-send {
+      height: 48px;
+    }
+  }
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  width: 306px;
+  height: 100%;
+}
+.swiper-pagination-bullet-active {
+  background: $primary-gradient;
+}

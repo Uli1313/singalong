@@ -18,14 +18,14 @@
     transform: rotate(10deg);
   }
   &-img-1 {
-    animation: scroll-6px 12s linear infinite paused;
+    animation: scroll-6px 12s linear infinite;
   }
   &-img-2 {
-    animation: scroll-10px 14s -1s linear infinite reverse paused;
+    animation: scroll-10px 14s -1s linear infinite reverse;
     left: 25%;
   }
   &-img-3 {
-    animation: scroll-6px 16s -1.5s linear infinite paused;
+    animation: scroll-6px 16s -1.5s linear infinite;
     left: 50%;
   }
   &-content {

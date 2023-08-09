@@ -14,6 +14,7 @@
 @import "./components/progress";
 @import "./components/form";
 @import "./components/card";
+@import "./components/pagination";
 
 @import "./base";
 
@@ -23,3 +24,4 @@
 @import "./pages/index.scss";
 @import "./pages/create";
 @import "./pages/meetup-list";
+@import "./pages/meetup-information";

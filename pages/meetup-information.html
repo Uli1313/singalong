@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <title>揪團資訊 | SINGALONG</title>
+  </head>
+  <body>
+    <div class="bg-primary-dark">
+      <div class="subbanner overflow-hidden position-relative mb-10">
+        <%- include('./layout/header'); -%>
+        <div
+          class="subbanner-content bg-right-black-gradient position-absolute top-50 translate-middle-y"
+        >
+          <h2
+            class="position-absolute top-50 start-50 translate-middle ms-md-9"
+          >
+            揪團資訊
+          </h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-10"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item">
+              <a href="meetup-list.html">揪團列表</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">揪團資訊</li>
+          </ol>
+        </nav>
+        <!-- main -->
+        <main class="pt-10">
+          <div
+            class="row mb-80 justify-content-center align-items-center row-gap-6"
+          >
+            <div class="col-md-5 col-lg-4 text-center">
+              <img
+                src="../assets/images/create/partyworld.png"
+                alt="partyworld"
+                class="rounded-4"
+              />
+            </div>
+            <div class="col-md-7 col-lg-5">
+              <div
+                class="d-flex justify-content-between pb-3 mb-9 border-bottom border-primary-light"
+              >
+                <h3 class="fs-4">台北錢櫃唱歌++</h3>
+                <span class="material-icons"> share </span>
+              </div>
+              <ul class="mb-9">
+                <li class="d-flex mb-2">
+                  <span class="material-icons me-2"> schedule </span>
+                  <p>09/22 (五) 20:00 - 23:00</p>
+                </li>
+                <li class="d-flex mb-2">
+                  <span class="material-icons me-2"> location_on </span>
+                  <p>錢櫃 - 台北林森店, 台北市中山區林森北路312號</p>
+                </li>
+                <li class="d-flex mb-2">
+                  <span class="material-icons me-2"> people_alt </span>
+                  <p class="me-2">( 6 / 8 )</p>
+                  <a href="##">查看成員</a>
+                </li>
+                <li class="d-flex">
+                  <span class="material-icons me-2"> mic_external_on </span>
+                  <p>國語 KTV</p>
+                </li>
+              </ul>
+              <div class="text-end">
+                <a href="##" class="btn btn-major rounded-pill w-50 ms-auto"
+                  >參加揪團</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row mb-80">
+            <div class="meetup-intro col-md-6">
+              <h4
+                class="fs-4 pb-3 border-bottom border-primary-light text-primary-light"
+              >
+                揪團介紹
+              </h4>
+              <p class="py-6 p-lg-6">
+                嗨~歌唱達人和沐浴在音樂中的朋友們！<br /><br />
+                來參加一場超級療癒的唱歌聚會吧！<br />
+                不論你是淋漓濺彩的高音王子，還是低音醇厚的歌后<br />
+                這裡是你展現才華的最佳舞台🎤<br /><br />
+                讓我們忘卻一切煩惱，隨著旋律盡情飛翔！<br />
+                一同融入音樂的海洋，感受節奏的躍動，一起創造美好的回憶<br /><br />
+                邀請你的朋友們，一同參與這場歌唱派對<br />
+                讓我們攜手合唱，共創動人旋律！<br /><br />
+                準備好在音樂的海洋中暢遊嗎？就等你加入喔！🎶🎉
+              </p>
+            </div>
+            <div class="meetup-comment col-md-6 d-flex flex-column">
+              <h4
+                class="fs-4 pb-3 border-bottom border-primary-light text-primary-light"
+              >
+                留言
+              </h4>
+              <div class="py-6 p-lg-6 d-flex flex-column flex-grow-1">
+                <div class="d-flex flex-grow-1">
+                  <img
+                    src="../assets/images/emily.png"
+                    alt="emily"
+                    class="meetup-comment-user rounded-circle me-2"
+                  />
+                  <div>
+                    <div class="d-flex gap-2 align-items-center">
+                      <p class="fw-bold">Emily</p>
+                      <i class="fa-solid fa-crown" style="color: #ffc800"></i>
+                      <p class="text-primary-light">2023/09/12 09:20</p>
+                    </div>
+                    <p>嗨嗨~歡迎一起來唱歌</p>
+                  </div>
+                </div>
+                <div
+                  class="meetup-comment-send d-flex align-items-center bg-primary-medium rounded-3 p-2"
+                >
+                  <input
+                    type="text"
+                    class="form-control flex-grow-1 bg-primary-medium border-0"
+                    placeholder="請輸入留言"
+                  />
+                  <span class="material-icons pointer p-1"> send </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4
+            class="fs-4 pb-3 mb-4 border-bottom border-primary-light text-primary-light"
+          >
+            看看更多揪團
+          </h4>
+          <!-- Swiper -->
+          <div class="swiper mySwiper mb-80">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img src="../assets/images/create/mic.png" alt="mic" />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09/22 (五) 20:00 - 23:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>錢櫃 - 台北林森店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/partyworld.png"
+                    alt="partyworld"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">9/24 松江錢櫃</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09/24 (日) 13:00 - 16:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>錢櫃 - 台北松江店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/holidayktv.png"
+                    alt="holidayktv"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">彰化好樂迪GOGO</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09/24 (日) 09:00 - 12:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>好樂迪 - 彰化員林店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/karaoke.png"
+                    alt="karaoke"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">台中揪日K</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09 /26 (二) 14:00 - 17:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>JapanMelody</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/holidayktv.png"
+                    alt="holidayktv"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">9/27桃園練歌團</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09/27 (三) 19:00 - 22:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>好樂迪 - 桃園復興店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/enjoyyourlife.png"
+                    alt="enjoyyourlife"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">台南享溫馨 19:00</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>09/29 (五) 19:00 - 23:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>享溫馨 - 台南中華店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img src="../assets/images/create/partyworld.png" alt="mic" />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">台中平日唱歌</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>10/09 (一) 13:00 - 16:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>錢櫃 - 台中自由店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img
+                    src="../assets/images/create/silverbox.png"
+                    alt="silverbox"
+                  />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">10/19 逢甲夜唱</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>10/19 (四) 22:00 - 6:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>銀櫃 - 逢甲店</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                >
+                  <img src="../assets/images/create/mic2.png" alt="mic" />
+                  <div class="card-body bg-primary-medium">
+                    <h3 class="fs-5 mb-2">台中美樂地白天場</h3>
+                    <div class="d-flex mb-1">
+                      <span class="material-icons me-2"> schedule </span>
+                      <p>10/20 (五) 12:00 - 16:00</p>
+                    </div>
+                    <div class="d-flex">
+                      <span class="material-icons me-2"> location_on </span>
+                      <p>台中美樂地KTV</p>
+                    </div>
+                  </div>
+                  <a href="meetup-information.html" class="stretched-link"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </main>
+      </div>
+      <%- include('./layout/footer'); -%>
+    </div>
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>

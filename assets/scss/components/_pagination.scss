@@ -1,0 +1,13 @@
+.page-link {
+  background: $primary-dark;
+  &:hover {
+    background: $primary-medium;
+  }
+  &:focus {
+    background: $primary-medium;
+    box-shadow: none;
+  }
+}
+.active > .page-link {
+  background: $primary-light;
+}
