@@ -16,18 +16,7 @@
   </head>
   <body>
     <div class="bg-primary-dark">
-      <div class="subbanner overflow-hidden position-relative mb-10">
-        <%- include('./layout/header'); -%>
-        <div
-          class="subbanner-content bg-right-black-gradient position-absolute top-50 translate-middle-y"
-        >
-          <h2
-            class="position-absolute top-50 start-50 translate-middle ms-md-9"
-          >
-            建立揪團
-          </h2>
-        </div>
-      </div>
+      <%- include('./layout/subbanner',{bannerTitle: '建立揪團'}); -%>
       <div class="container-fluid">
         <!-- breadcrumb -->
         <nav
@@ -43,36 +32,7 @@
         <!-- main -->
         <main>
           <!-- step-progress -->
-          <div class="mb-10">
-            <div class="progress bg-primary-medium" style="height: 1px">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 0%"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <ol
-              class="progress-list d-flex justify-content-between position-relative"
-            >
-              <li class="text-center w-33">
-                <div class="progress-circle rounded-circle mx-auto mb-2 active">
-                  1
-                </div>
-                <p class="text-nowrap">填寫開團資料</p>
-              </li>
-              <li class="text-center w-33">
-                <div class="progress-circle rounded-circle mx-auto mb-2">2</div>
-                <p>新增圖片</p>
-              </li>
-              <li class="text-center w-33">
-                <div class="progress-circle rounded-circle mx-auto mb-2">3</div>
-                <p>開團成功</p>
-              </li>
-            </ol>
-          </div>
+          <%- include('./layout/step-progress',{page: 'create1'}); -%>
           <!-- form -->
           <div class="row">
             <div class="col col-md-8 col-lg-6 mx-auto mb-10">

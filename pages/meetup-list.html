@@ -16,18 +16,7 @@
   </head>
   <body>
     <div class="bg-primary-dark">
-      <div class="subbanner overflow-hidden position-relative mb-10">
-        <%- include('./layout/header'); -%>
-        <div
-          class="subbanner-content bg-right-black-gradient position-absolute top-50 translate-middle-y"
-        >
-          <h2
-            class="position-absolute top-50 start-50 translate-middle ms-md-9"
-          >
-            揪團列表
-          </h2>
-        </div>
-      </div>
+      <%- include('./layout/subbanner',{bannerTitle: '揪團列表'}); -%>
       <div class="container-fluid">
         <!-- breadcrumb -->
         <nav

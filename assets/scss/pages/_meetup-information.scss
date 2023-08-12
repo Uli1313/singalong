@@ -4,12 +4,15 @@
     min-height: 360px;
   }
   &-comment {
-    &-user {
-      height: 48px;
-      width: 48px;
-    }
     &-send {
       height: 48px;
+    }
+  }
+  &-user {
+    height: 48px;
+    width: 48px;
+    &-number {
+      min-width: 24px;
     }
   }
 }
