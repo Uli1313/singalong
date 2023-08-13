@@ -23,10 +23,70 @@
   </head>
   <body>
     <div class="bg-primary-dark">
-      <%- include('./layout/subbanner',{bannerTitle: '揪團資訊'}); -%> <%-
-      include('./layout/meetup-information',{isJoined :'disabled', isJoinedText
-      : '已參加', quitButton:'d-inline-block'}); -%> <%-
-      include('./layout/footer'); -%>
+      <%- include('./layout/subbanner',{bannerTitle: '揪團資訊'}); -%>
+      <div class="container-fluid">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-10"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item">
+              <a href="##">我的揪團</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">揪團資訊</li>
+          </ol>
+        </nav>
+        <%- include('./layout/meetup-information',{isJoined :'disabled',
+        isJoinedText : '已參加', quitButton:'d-inline-block'}); -%>
+      </div>
+      <%- include('./layout/footer'); -%>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="quitButton"
+        tabindex="-1"
+        aria-labelledby="quitButtonLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div
+            class="modal-content bg-primary-dark border border-primary-light border-2 rounded-4 p-4"
+          >
+            <div class="d-flex justify-content-end border-0">
+              <span
+                type="button"
+                class="material-icons"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                close
+              </span>
+            </div>
+            <h5 class="text-center fs-3 mb-8" id="join-buttonLabel">
+              確定要退出嗎？
+            </h5>
+            <div class="d-flex border-0 justify-content-evenly mb-8">
+              <a
+                href="meetup-information.html"
+                type="button"
+                class="btn btn-major rounded-pill"
+              >
+                確定
+              </a>
+              <a
+                type="button"
+                class="btn btn-minor rounded-pill"
+                data-bs-dismiss="modal"
+              >
+                取消
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="../main.js"></script>

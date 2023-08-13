@@ -26,30 +26,28 @@
   color: $white;
   box-shadow: none;
 }
-.btn:first-child:active {
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
   border-color: transparent;
 }
 
 .btn {
-  &-major,
-  &-minor {
-    position: relative;
-    overflow: hidden;
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      background: rgba(255, 255, 255, 1);
-      top: 0;
-      left: -30%;
-      transform: rotate(-35deg);
-      box-shadow: 0 0 20px 2px white;
-    }
-    &:hover::before {
-      animation: luster 2s;
-    }
-    &:active {
-      box-shadow: none;
-    }
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    top: 0;
+    left: -30%;
+    transform: rotate(-35deg);
+    box-shadow: 0 0 20px 2px white;
+  }
+  &:hover::before {
+    animation: luster 2s;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
