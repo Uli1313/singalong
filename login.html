@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
+    <title>登入/註冊 | SINGALONG</title>
+    <script type="module" crossorigin src="/singalong/assets/main-741c917a.js"></script>
+    <link rel="stylesheet" href="/singalong/assets/main-9a11f859.css">
+  </head>
+  <body>
+    <div class="login bg-primary-dark vh-100 overflow-hidden position-relative">
+      <div
+        class="login-deco position-absolute rounded-circle bg-primary-gradient"
+      ></div>
+      <div class="container-fluid h-100">
+        <div class="row justify-content-around align-items-center h-100">
+          <div class="signup-opacity col-4 col-xl-3">
+            <h2 class="text-center mb-6">歡迎使用</h2>
+            <div class="mb-4">
+              <label>使用者名稱</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="請輸入使用者名稱"
+              />
+            </div>
+            <div class="mb-4">
+              <label>Email</label>
+              <input
+                type="mail"
+                class="form-control"
+                placeholder="請輸入 Email"
+              />
+            </div>
+            <div class="mb-4">
+              <label>密碼</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="請輸入 8-12 位英數混合密碼"
+              />
+            </div>
+            <div class="mb-10">
+              <label>確認密碼</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="請再次輸入密碼"
+              />
+            </div>
+            <a href="##" class="btn btn-major w-100 rounded-pill mb-6">註冊</a>
+            <p class="text-center">
+              已有帳號？
+              <u class="link-primary pointer" id="go-login">立即登入</u>
+            </p>
+          </div>
+          <div class="login-opacity col-4 col-xl-3">
+            <h2 class="text-center mb-6">歡迎回來</h2>
+            <form action="" method="get">
+              <div class="mb-8">
+                <label>帳號</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="account"
+                  placeholder="使用者名稱 / Email"
+                  required
+                />
+              </div>
+              <div class="mb-10">
+                <label class="me-1">密碼</label>
+                <a href="##">忘記密碼？</a>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="login-password"
+                  placeholder="請輸入密碼"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-major w-100 rounded-pill mb-6"
+              >
+                登入
+              </button>
+            </form>
+            <p class="text-center">
+              還沒有帳號嗎？
+              <u class="link-primary pointer" id="go-signup">立即註冊</u>
+            </p>
+          </div>
+        </div>
+      </div>
+      <a
+        href="index.html"
+        class="back-index btn btn-minor position-fixed rounded-pill d-flex align-items-center"
+        >回首頁<span class="material-icons">navigate_next</span></a
+      >
+    </div>
+    
+    <script>
+      const loginDeco = document.querySelector(".login-deco");
+
+      const goSignup = document.querySelector("#go-signup");
+      const goLogin = document.querySelector("#go-login");
+
+      const loginOpacity = document.querySelector(".login-opacity");
+      const signupOpacity = document.querySelector(".signup-opacity");
+
+      goSignup.addEventListener("click", function () {
+        loginDeco.style.right = "-45%";
+        loginDeco.style.transform = "rotate(180deg)";
+
+        signupOpacity.style.opacity = "1";
+        signupOpacity.style.pointerEvents = "auto";
+        loginOpacity.style.opacity = "0";
+        loginOpacity.style.pointerEvents = "none";
+      });
+      goLogin.addEventListener("click", function () {
+        loginDeco.style.right = "45%";
+        loginDeco.style.transform = "rotate(0deg)";
+
+        signupOpacity.style.opacity = "0";
+        signupOpacity.style.pointerEvents = "none";
+        loginOpacity.style.opacity = "1";
+        loginOpacity.style.pointerEvents = "auto";
+      });
+    </script>
+  </body>
+</html>
