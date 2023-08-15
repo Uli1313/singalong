@@ -1,6 +1,7 @@
 .banner {
   height: 100vh;
   background: $primary-gradient;
+  border-radius: 0 0 240px 240px;
   h1 {
     font-size: 112px;
     font-weight: 900;
@@ -32,6 +33,7 @@
     width: 65%;
   }
   @include pad-ls {
+    border-radius: 0 0 120px 120px;
     &-img-1,
     &-img-2,
     &-img-3 {
@@ -77,7 +79,7 @@
 .intro {
   &-img {
     filter: brightness(1);
-    transition: filter 0.3s;
+    transition: filter 0.3s, border-radius 0.3s;
   }
   &-desc {
     opacity: 0;
@@ -92,6 +94,7 @@
     &:hover {
       .intro {
         &-img {
+          border-radius: 16px !important;
           filter: brightness(0.4);
         }
         &-desc {

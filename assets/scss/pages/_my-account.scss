@@ -1,0 +1,13 @@
+.my-account {
+  &-list {
+    input:checked ~ label {
+      background: $primary-medium;
+    }
+    label:hover {
+      background: $primary-medium;
+    }
+  }
+  &-picture {
+    font-size: 300px;
+  }
+}

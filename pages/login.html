@@ -21,51 +21,68 @@
       ></div>
       <div class="container-fluid h-100">
         <div class="row justify-content-around align-items-center h-100">
-          <div class="signup-opacity col-4 col-xl-3">
+          <div class="signup-content col-md-4 col-xl-3">
             <h2 class="text-center mb-6">歡迎使用</h2>
-            <div class="mb-4">
-              <label>使用者名稱</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="請輸入使用者名稱"
-              />
-            </div>
-            <div class="mb-4">
-              <label>Email</label>
-              <input
-                type="mail"
-                class="form-control"
-                placeholder="請輸入 Email"
-              />
-            </div>
-            <div class="mb-4">
-              <label>密碼</label>
-              <input
-                type="password"
-                class="form-control"
-                placeholder="請輸入 8-12 位英數混合密碼"
-              />
-            </div>
-            <div class="mb-10">
-              <label>確認密碼</label>
-              <input
-                type="password"
-                class="form-control"
-                placeholder="請再次輸入密碼"
-              />
-            </div>
-            <a href="##" class="btn btn-major w-100 rounded-pill mb-6">註冊</a>
+            <form action="" method="get" class="needs-validation" novalidate>
+              <div class="mb-2">
+                <label class="fs-14">使用者名稱</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="請輸入使用者名稱"
+                  required
+                />
+                <div class="invalid-feedback">輸入錯誤</div>
+              </div>
+              <div class="mb-2">
+                <label class="fs-14">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="請輸入 Email"
+                  required
+                />
+                <div class="invalid-feedback">輸入錯誤</div>
+              </div>
+              <div class="mb-2">
+                <label class="fs-14">密碼</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="請輸入 8-12 位英數混合密碼"
+                  required
+                />
+                <div class="invalid-feedback">輸入錯誤</div>
+              </div>
+              <div class="mb-10">
+                <label class="fs-14">確認密碼</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="請再次輸入密碼"
+                  minlength="8"
+                  maxlength="12"
+                  required
+                />
+                <div class="invalid-feedback">輸入錯誤</div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-major w-100 rounded-pill mb-6"
+              >
+                註冊
+              </button>
+            </form>
             <p class="text-center">
               已有帳號？
               <u class="link-primary pointer" id="go-login">立即登入</u>
             </p>
           </div>
-          <div class="login-opacity col-4 col-xl-3">
+          <div class="login-content col-md-4 col-xl-3">
             <h2 class="text-center mb-6">歡迎回來</h2>
-            <form action="" method="get">
+            <form action="" method="get" class="needs-validation" novalidate>
               <div class="mb-8">
-                <label>帳號</label>
+                <label class="fs-14">帳號</label>
                 <input
                   type="text"
                   class="form-control"
@@ -73,9 +90,10 @@
                   placeholder="使用者名稱 / Email"
                   required
                 />
+                <div class="invalid-feedback">輸入錯誤</div>
               </div>
               <div class="mb-10">
-                <label class="me-1">密碼</label>
+                <label class="me-1 fs-14">密碼</label>
                 <a href="##">忘記密碼？</a>
                 <input
                   type="password"
@@ -83,7 +101,10 @@
                   name="login-password"
                   placeholder="請輸入密碼"
                   required
+                  minlength="8"
+                  maxlength="12"
                 />
+                <div class="invalid-feedback">輸入錯誤</div>
               </div>
               <button
                 type="submit"
@@ -112,27 +133,56 @@
       const goSignup = document.querySelector("#go-signup");
       const goLogin = document.querySelector("#go-login");
 
-      const loginOpacity = document.querySelector(".login-opacity");
-      const signupOpacity = document.querySelector(".signup-opacity");
+      const loginContent = document.querySelector(".login-content");
+      const signupContent = document.querySelector(".signup-content");
 
       goSignup.addEventListener("click", function () {
-        loginDeco.style.right = "-45%";
+        const windowWidth = window.innerWidth;
+        if (windowWidth >= 768) {
+          loginDeco.style.right = "-45%";
+        }
         loginDeco.style.transform = "rotate(180deg)";
-
-        signupOpacity.style.opacity = "1";
-        signupOpacity.style.pointerEvents = "auto";
-        loginOpacity.style.opacity = "0";
-        loginOpacity.style.pointerEvents = "none";
+        signupContent.style.opacity = "1";
+        signupContent.style.pointerEvents = "auto";
+        loginContent.style.opacity = "0";
+        loginContent.style.pointerEvents = "none";
       });
       goLogin.addEventListener("click", function () {
-        loginDeco.style.right = "45%";
+        const windowWidth = window.innerWidth;
+        if (windowWidth >= 768) {
+          loginDeco.style.right = "45%";
+        }
         loginDeco.style.transform = "rotate(0deg)";
-
-        signupOpacity.style.opacity = "0";
-        signupOpacity.style.pointerEvents = "none";
-        loginOpacity.style.opacity = "1";
-        loginOpacity.style.pointerEvents = "auto";
+        signupContent.style.opacity = "0";
+        signupContent.style.pointerEvents = "none";
+        loginContent.style.opacity = "1";
+        loginContent.style.pointerEvents = "auto";
       });
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
     </script>
   </body>
 </html>

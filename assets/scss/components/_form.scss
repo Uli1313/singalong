@@ -10,7 +10,7 @@
   border-bottom: 1px solid $primary-light;
 }
 .input-group-text {
-  color: $primary-light;
+  color: $white;
   border: none;
 }
 .form-control,
@@ -28,7 +28,7 @@
   padding-left: 36px;
 }
 .form-select-default {
-  color: #6c757d;
+  color: $primary-light;
 }
 .form-select-changed {
   color: $white;
@@ -45,6 +45,7 @@ input {
     -webkit-text-fill-color: white;
   }
 }
-input::placeholder {
-  -webkit-text-fill-color: #6c757d;
+input::placeholder,
+textarea::placeholder {
+  -webkit-text-fill-color: $primary-light;
 }

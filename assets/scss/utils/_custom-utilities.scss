@@ -15,6 +15,33 @@
   background-position: left 0;
   filter: drop-shadow($box-shadow-lg);
 }
+.deco-circle,
+.deco-circle-sm {
+  position: relative;
+  z-index: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background: $primary-gradient;
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+.deco-circle {
+  &::before {
+    width: 120px;
+    height: 120px;
+  }
+  &-sm::before {
+    top: 30%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .bg-primary-gradient {
   background: $primary-gradient;
 }
