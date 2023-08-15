@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
+    <title>我的帳戶 | SINGALONG</title>
+    <script type="module" crossorigin src="/singalong/assets/main-90d968a8.js"></script>
+    <link rel="stylesheet" href="/singalong/assets/main-90e72325.css">
+  </head>
+  <body>
+    <div class="min-vh-100">
+      <div class="bg-primary-gradient"><!-- nav 下 position-relative 來避免被 banner-group 覆蓋的問題 -->
+<nav
+  class="navbar navbar-expand-md navbar-dark bg-tranparent position-relative"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">SINGALONG</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="create1.html">建立揪團</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="meetup-list.html">揪團列表</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">我的歌本</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="material-icons"> account_circle </span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="my-account.html">我的帳戶</a>
+            </li>
+            <li><a class="dropdown-item" href="#">我的揪團</a></li>
+            <li><a class="dropdown-item" href="login.html">登出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+      <div class="bg-primary-dark">
+        <div class="container-fluid pt-10">
+          <!-- breadcrumb -->
+          <nav
+            style="--bs-breadcrumb-divider: '>'"
+            aria-label="breadcrumb"
+            class="mb-10"
+          >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                我的帳戶
+              </li>
+            </ol>
+          </nav>
+          <!-- main -->
+          <main>
+            <div class="row">
+              <div class="col-3 my-account-list">
+                <p
+                  class="d-none d-sm-block p-6 border-bottom border-primary-light fs-5 text-center"
+                >
+                  我的帳戶
+                </p>
+                <div class="text-center">
+                  <input
+                    type="radio"
+                    class="d-none"
+                    id="personal-profile"
+                    name="my-account-list"
+                    checked
+                  /><label class="d-block py-5 pointer" for="personal-profile"
+                    >個人檔案</label
+                  >
+                </div>
+                <div class="text-center">
+                  <input
+                    type="radio"
+                    class="d-none"
+                    id="account-information"
+                    name="my-account-list"
+                  /><label
+                    class="d-block py-5 pointer"
+                    for="account-information"
+                    >帳號資料</label
+                  >
+                </div>
+                <div class="text-center">
+                  <input
+                    type="radio"
+                    class="d-none"
+                    id="notification"
+                    name="my-account-list"
+                  /><label class="d-block py-5 pointer" for="notification"
+                    >通知總覽</label
+                  >
+                </div>
+              </div>
+              <!-- personal-profile -->
+              <div class="col-9">
+                <div class="p-6 mb-2">
+                  <h2 class="d-inline-block deco-circle">個人檔案</h2>
+                </div>
+                <div class="py-12 px-6 mb-10">
+                  <form action="" class="mb-10">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="input-group align-items-center mb-3 ms-4">
+                          <label for="nickname " class="input-group-text"
+                            >暱稱</label
+                          >
+                          <input
+                            type="text"
+                            value="Uli"
+                            class="form-control w-50 flex-grow-0 border border-primary-light rounded-3"
+                          />
+                        </div>
+                        <div class="input-group align-items-start">
+                          <label for="nickname " class="input-group-text"
+                            >關於我</label
+                          >
+                          <textarea
+                            class="form-control border border-primary-light rounded-3"
+                            style="height: 360px"
+                            placeholder="介紹自己，讓大家更認識你：）"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="col-6 d-flex flex-column align-items-center">
+                        <span
+                          class="my-account-picture material-icons text-primary-medium"
+                        >
+                          face
+                        </span>
+                        <div class="d-flex gap-3">
+                          <label
+                            for="upload-my-account-picture"
+                            class="btn btn-minor rounded-pill fs-6"
+                            >上傳圖片</label
+                          >
+                          <input
+                            type="file"
+                            id="upload-my-account-picture"
+                            accept="image/jpeg, image/png"
+                            class="d-none"
+                          />
+                          <a href="" class="btn btn-danger rounded-pill fs-6"
+                            >移除圖片</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <a
+                    href=""
+                    class="personal-profile-submit btn btn-major d-block w-25 ms-auto"
+                    >儲存</a
+                  >
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <footer class="bg-primary-gradient">
+  <div class="container-fluid py-5">
+    <div class="row align-items-center">
+      <ul
+        class="col-lg-4 d-flex fs-48 gap-12 mb-2 mb-lg-0 justify-content-lg-center order-lg-1"
+      >
+        <li>
+          <a href="##" class="text-white"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li>
+          <a href="##" class="text-white"><i class="bi bi-instagram"></i></a>
+        </li>
+        <li>
+          <a href="##" class="text-white"><i class="bi bi-twitter"></i></a>
+        </li>
+      </ul>
+      <div class="col-lg-4 order-lg-0">
+        <p>Copyright © 2023 SINGALONG. All rights reserved.</p>
+        <p>本網站僅作為個人練習作品，無任何商業用途</p>
+      </div>
+    </div>
+  </div>
+  <!-- back to top -->
+  <a
+    href="#"
+    class="fixed-bottom fs-48 text-white"
+    style="right: 3%; bottom: 5%; left: auto"
+    ><i class="bi bi-arrow-up-circle-fill"></i
+  ></a>
+</footer>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
