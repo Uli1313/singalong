@@ -15,33 +15,31 @@
     <title>我的帳戶 | SINGALONG</title>
   </head>
   <body>
-    <div class="min-vh-100">
-      <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
-      <div class="bg-primary-dark">
-        <div class="container-fluid pt-10">
-          <!-- breadcrumb -->
-          <nav
-            style="--bs-breadcrumb-divider: '>'"
-            aria-label="breadcrumb"
-            class="mb-10"
-          >
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-              <li class="breadcrumb-item active" aria-current="page">
+    <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
+    <div class="my-account bg-primary-dark">
+      <div class="container-fluid pt-10">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-10"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">我的帳戶</li>
+          </ol>
+        </nav>
+        <!-- main -->
+        <main>
+          <div class="row">
+            <div class="col-lg-3 my-account-list mb-sm-12 mb-lg-0">
+              <p
+                class="p-6 border-bottom border-primary-light fs-5 text-center"
+              >
                 我的帳戶
-              </li>
-            </ol>
-          </nav>
-          <!-- main -->
-          <main>
-            <div class="row">
-              <div class="col-3 my-account-list">
-                <p
-                  class="d-none d-sm-block p-6 border-bottom border-primary-light fs-5 text-center"
-                >
-                  我的帳戶
-                </p>
-                <div class="text-center">
+              </p>
+              <div class="d-flex d-lg-block">
+                <div class="text-center flex-grow-1">
                   <input
                     type="radio"
                     class="d-none"
@@ -52,7 +50,7 @@
                     >個人檔案</label
                   >
                 </div>
-                <div class="text-center">
+                <div class="text-center flex-grow-1">
                   <input
                     type="radio"
                     class="d-none"
@@ -64,7 +62,7 @@
                     >帳號資料</label
                   >
                 </div>
-                <div class="text-center">
+                <div class="text-center flex-grow-1">
                   <input
                     type="radio"
                     class="d-none"
@@ -75,75 +73,251 @@
                   >
                 </div>
               </div>
-              <!-- personal-profile -->
-              <div class="col-9">
-                <div class="p-6 mb-2">
-                  <h2 class="d-inline-block deco-circle">個人檔案</h2>
-                </div>
-                <div class="py-12 px-6 mb-10">
-                  <form action="" class="mb-10">
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="input-group align-items-center mb-3 ms-4">
-                          <label for="nickname " class="input-group-text"
-                            >暱稱</label
-                          >
-                          <input
-                            type="text"
-                            value="Uli"
-                            class="form-control w-50 flex-grow-0 border border-primary-light rounded-3"
-                          />
-                        </div>
-                        <div class="input-group align-items-start">
-                          <label for="nickname " class="input-group-text"
-                            >關於我</label
-                          >
-                          <textarea
-                            class="form-control border border-primary-light rounded-3"
-                            style="height: 360px"
-                            placeholder="介紹自己，讓大家更認識你：）"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="col-6 d-flex flex-column align-items-center">
-                        <span
-                          class="my-account-picture material-icons text-primary-medium"
+            </div>
+            <!-- personal-profile -->
+            <div class="col-lg-9" id="personal-profile-content">
+              <div class="p-6 mb-2 d-none d-lg-block">
+                <h2 class="d-inline-block deco-circle">個人檔案</h2>
+              </div>
+              <div class="py-6 p-lg-6 mb-10">
+                <form action="" class="mb-10">
+                  <div class="row">
+                    <div
+                      class="col-md-6 order-md-2 mb-10 d-flex flex-column align-items-center"
+                    >
+                      <span
+                        class="my-account-picture material-icons text-primary-medium"
+                      >
+                        face
+                      </span>
+                      <div class="d-flex gap-3">
+                        <label
+                          for="upload-my-account-picture"
+                          class="btn btn-minor rounded-pill fs-6"
+                          >上傳圖片</label
                         >
-                          face
-                        </span>
-                        <div class="d-flex gap-3">
-                          <label
-                            for="upload-my-account-picture"
-                            class="btn btn-minor rounded-pill fs-6"
-                            >上傳圖片</label
-                          >
-                          <input
-                            type="file"
-                            id="upload-my-account-picture"
-                            accept="image/jpeg, image/png"
-                            class="d-none"
-                          />
-                          <a href="" class="btn btn-danger rounded-pill fs-6"
-                            >移除圖片</a
-                          >
-                        </div>
+                        <input
+                          type="file"
+                          id="upload-my-account-picture"
+                          accept="image/jpeg, image/png"
+                          class="d-none"
+                        />
+                        <a href="" class="btn btn-danger rounded-pill fs-6"
+                          >移除圖片</a
+                        >
                       </div>
                     </div>
-                  </form>
+                    <div class="col-md-6 order-md-1">
+                      <div
+                        class="input-group d-block d-md-flex align-items-center mb-3 ms-lg-4"
+                      >
+                        <label for="nickname " class="input-group-text"
+                          >暱稱</label
+                        >
+                        <input
+                          type="text"
+                          value="Uli"
+                          class="form-control w-50 flex-grow-0 border border-primary-light rounded-3"
+                        />
+                      </div>
+                      <div
+                        class="input-group d-block d-md-flex align-items-start"
+                      >
+                        <label for="nickname " class="input-group-text"
+                          >關於我</label
+                        >
+                        <textarea
+                          class="form-control border border-primary-light rounded-3 w-100"
+                          style="height: 360px"
+                          placeholder="介紹自己，讓大家更認識你：）"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <a
+                  href=""
+                  class="personal-profile-submit btn btn-major d-block w-25 ms-auto"
+                  >儲存</a
+                >
+              </div>
+            </div>
+            <!-- account-information -->
+            <div
+              class="col-lg-9"
+              id="account-information-content"
+              style="display: none"
+            >
+              <div class="p-6 mb-2 d-none d-lg-block">
+                <h2 class="d-inline-block deco-circle">帳號資料</h2>
+              </div>
+              <div class="py-6 mb-10">
+                <table
+                  class="account-information-table table text-white align-middle mx-auto"
+                >
+                  <tbody class="text-nowrap">
+                    <tr>
+                      <!-- why -->
+                      <th scope="row" class="border-0 fs-sm-1">使用者名稱</th>
+                      <td class="border-0">
+                        <input
+                          type="text"
+                          value="Uli"
+                          class="form-control border-primary-light rounded-3"
+                          style="border-width: 0"
+                          id="account-information-username"
+                          readonly
+                        />
+                      </td>
+                      <td class="border-0">
+                        <u class="link-primary pointer" id="edit-username"
+                          >變更</u
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-0">Email</th>
+                      <td class="border-0">
+                        <input
+                          type="email"
+                          value="Uli@gmail.com"
+                          class="form-control border-primary-light rounded-3"
+                          readonly
+                          style="border-width: 0"
+                          id="account-information-email"
+                        />
+                      </td>
+                      <td class="border-0">
+                        <u class="link-primary pointer" id="edit-email">變更</u>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-0">手機號碼</th>
+                      <td class="border-0">
+                        <input
+                          type="text"
+                          placeholder="尚未填寫"
+                          class="form-control border-primary-light rounded-3"
+                          style="border-width: 0"
+                          id="account-information-phone"
+                          readonly
+                        />
+                      </td>
+                      <td class="border-0">
+                        <u class="link-primary pointer" id="edit-phone">變更</u>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- notification -->
+            <div
+              class="col-lg-9"
+              id="notification-content"
+              style="display: none"
+            >
+              <div class="p-6 mb-2 d-none d-lg-block">
+                <h2 class="d-inline-block deco-circle">通知總覽</h2>
+              </div>
+              <div class="py-6 p-lg-6 mb-10">
+                <div
+                  class="d-flex flex-column bg-primary-dark py-3 border-bottom border-primary-light position-relative"
+                >
+                  <p>
+                    <span class="fw-bold">Emily</span> 在
+                    <span class="fw-bold">台北錢櫃唱歌++</span>
+                    的留言板發送了訊息：「 嗨嗨~歡迎一起來唱歌 」
+                  </p>
+                  <p class="text-primary-light">2023/09/12 09:20</p>
                   <a
-                    href=""
-                    class="personal-profile-submit btn btn-major d-block w-25 ms-auto"
-                    >儲存</a
-                  >
+                    href="my-meetup-information.html"
+                    class="stretched-link"
+                  ></a>
                 </div>
               </div>
             </div>
-          </main>
-        </div>
-        <%- include('./layout/footer'); -%>
+          </div>
+        </main>
       </div>
     </div>
-
+    <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script>
+      // 側邊選單切換
+      const accountList = {
+        personalProfile: document.querySelector("#personal-profile"),
+        personalProfileContent: document.querySelector(
+          "#personal-profile-content"
+        ),
+        accountInformation: document.querySelector("#account-information"),
+        accountInformationContent: document.querySelector(
+          "#account-information-content"
+        ),
+        notification: document.querySelector("#notification"),
+        notificationContent: document.querySelector("#notification-content"),
+      };
+      function accountListDisplay(active, activeContent) {
+        accountList[active].addEventListener("click", () => {
+          accountList[activeContent].style.display = "block";
+          for (const id in accountList) {
+            if (
+              id !== activeContent &&
+              (id === "personalProfileContent" ||
+                id === "accountInformationContent" ||
+                id === "notificationContent")
+            ) {
+              accountList[id].style.display = "none";
+            }
+          }
+        });
+      }
+      accountListDisplay("personalProfile", "personalProfileContent");
+      accountListDisplay("accountInformation", "accountInformationContent");
+      accountListDisplay("notification", "notificationContent");
+
+      // 變更帳戶資料
+      const editList = {
+        username: document.querySelector("#account-information-username"),
+        editUsername: document.querySelector("#edit-username"),
+        email: document.querySelector("#account-information-email"),
+        editEmail: document.querySelector("#edit-email"),
+        phone: document.querySelector("#account-information-phone"),
+        editPhone: document.querySelector("#edit-phone"),
+      };
+      function editListContent(editItem, editButton) {
+        editList[editButton].addEventListener("click", () => {
+          if (editList[editItem].readOnly) {
+            editList[editButton].innerHTML = "儲存";
+            editList[editItem].readOnly = !editList[editItem].readOnly;
+            editList[editItem].focus();
+            editList[editItem].style.border = "1px solid #777393";
+          } else {
+            editList[editButton].innerHTML = "變更";
+            editList[editItem].readOnly = !editList[editItem].readOnly;
+            editList[editItem].style.border = "none";
+          }
+        });
+      }
+      editListContent("username", "editUsername");
+      editListContent("email", "editEmail");
+      editListContent("phone", "editPhone");
+
+      // const username = document.querySelector("#account-information-username");
+      // const editUsername = document.querySelector("#edit-username");
+      // console.log(username);
+      // editUsername.addEventListener("click", () => {
+      //   if (username.readOnly) {
+      //     editUsername.innerHTML = "儲存";
+      //     username.readOnly = !username.readOnly;
+      //     username.focus();
+      //     username.style.border = "1px solid #777393";
+      //   } else {
+      //     editUsername.innerHTML = "變更";
+      //     username.readOnly = !username.readOnly;
+      //     username.style.border = "none";
+      //   }
+      // });
+    </script>
   </body>
 </html>

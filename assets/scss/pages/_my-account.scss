@@ -1,4 +1,5 @@
 .my-account {
+  min-height: calc(100vh - 63px - 112px);
   &-list {
     input:checked ~ label {
       background: $primary-medium;
@@ -10,4 +11,7 @@
   &-picture {
     font-size: 300px;
   }
+}
+.account-information-table {
+  max-width: 500px;
 }
