@@ -1,0 +1,44 @@
+.footer-icon {
+  width: 48px;
+  path {
+    fill: transparent;
+    stroke: $white;
+    stroke-width: 0.7;
+  }
+}
+.facebook {
+  path {
+    stroke-dasharray: 90;
+    stroke-dashoffset: 0;
+  }
+  &:hover path {
+    animation: facebook 1s linear forwards;
+  }
+}
+.instagram {
+  path {
+    stroke-dasharray: 58;
+    stroke-dashoffset: 0;
+  }
+  &:hover path {
+    animation: instagram 1s linear forwards;
+  }
+}
+.twitter {
+  width: 46px;
+  path {
+    stroke-width: 20;
+    stroke-dasharray: 2220;
+    stroke-dashoffset: 0;
+  }
+  &:hover path {
+    animation: twitter 1s linear forwards;
+  }
+}
+// .back {
+//   transition: all 0.3s;
+//   &:hover {
+//     animation: shakeY 0.5s ease-out infinite alternate;
+//     text-shadow: -5px 0 0 $secondary, 0 -5px 0 $tertiary, 5px 5px 0 $primary;
+//   }
+// }

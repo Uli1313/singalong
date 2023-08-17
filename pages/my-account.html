@@ -46,7 +46,9 @@
                     id="personal-profile"
                     name="my-account-list"
                     checked
-                  /><label class="d-block py-5 pointer" for="personal-profile"
+                  /><label
+                    class="d-block py-2 py-sm-5 pointer"
+                    for="personal-profile"
                     >個人檔案</label
                   >
                 </div>
@@ -57,7 +59,7 @@
                     id="account-information"
                     name="my-account-list"
                   /><label
-                    class="d-block py-5 pointer"
+                    class="d-block py-2 py-sm-5 pointer"
                     for="account-information"
                     >帳號資料</label
                   >
@@ -68,7 +70,9 @@
                     class="d-none"
                     id="notification"
                     name="my-account-list"
-                  /><label class="d-block py-5 pointer" for="notification"
+                  /><label
+                    class="d-block py-2 py-sm-5 pointer"
+                    for="notification"
                     >通知總覽</label
                   >
                 </div>
@@ -109,7 +113,7 @@
                     </div>
                     <div class="col-md-6 order-md-1">
                       <div
-                        class="input-group d-block d-md-flex align-items-center mb-3 ms-lg-4"
+                        class="input-group d-block d-md-flex align-items-center mb-3 ms-md-4"
                       >
                         <label for="nickname " class="input-group-text"
                           >暱稱</label
@@ -120,14 +124,12 @@
                           class="form-control w-50 flex-grow-0 border border-primary-light rounded-3"
                         />
                       </div>
-                      <div
-                        class="input-group d-block d-md-flex align-items-start"
-                      >
-                        <label for="nickname " class="input-group-text"
+                      <div class="input-group align-items-start">
+                        <label for="nickname" class="input-group-text"
                           >關於我</label
                         >
                         <textarea
-                          class="form-control border border-primary-light rounded-3 w-100"
+                          class="form-control border border-primary-light rounded-3 w-100 w-md-75"
                           style="height: 360px"
                           placeholder="介紹自己，讓大家更認識你：）"
                         ></textarea>
@@ -137,7 +139,7 @@
                 </form>
                 <a
                   href=""
-                  class="personal-profile-submit btn btn-major d-block w-25 ms-auto"
+                  class="personal-profile-submit btn btn-major d-block w-sm-50 w-md-25 ms-auto"
                   >儲存</a
                 >
               </div>
@@ -155,10 +157,9 @@
                 <table
                   class="account-information-table table text-white align-middle mx-auto"
                 >
-                  <tbody class="text-nowrap">
+                  <tbody class="text-nowrap fs-14 fs-sm-6">
                     <tr>
-                      <!-- why -->
-                      <th scope="row" class="border-0 fs-sm-1">使用者名稱</th>
+                      <th scope="row" class="border-0">使用者名稱</th>
                       <td class="border-0">
                         <input
                           type="text"

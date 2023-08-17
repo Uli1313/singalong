@@ -1,6 +1,6 @@
 // Utilities
 
-$utilities: () !default;
+$utilities: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities: map-merge(
   (

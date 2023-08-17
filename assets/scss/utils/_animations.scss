@@ -33,3 +33,49 @@
     transform: translateX(16%);
   }
 }
+@keyframes shakeY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5%);
+  }
+}
+
+// footer-icon
+@keyframes facebook {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 90;
+    stroke: #1773ea;
+  }
+  100% {
+    stroke-dashoffset: 180;
+  }
+}
+@keyframes instagram {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 58;
+    stroke: #c93171;
+  }
+  100% {
+    stroke-dashoffset: 116;
+  }
+}
+@keyframes twitter {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 2220;
+    stroke: rgb(15, 20, 25);
+  }
+  100% {
+    stroke-dashoffset: 4440;
+  }
+}
