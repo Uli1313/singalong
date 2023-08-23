@@ -15,9 +15,9 @@
     <title>揪團列表 | SINGALONG</title>
   </head>
   <body>
+    <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
     <div class="bg-primary-dark">
-      <%- include('./layout/subbanner',{bannerTitle: '揪團列表'}); -%>
-      <div class="container-fluid">
+      <div class="container-fluid pt-10">
         <!-- breadcrumb -->
         <nav
           style="--bs-breadcrumb-divider: '>'"
@@ -31,16 +31,15 @@
         </nav>
         <!-- main -->
         <main>
-          <!-- search -->
-
           <div class="row position-relative">
+            <!-- meetup-filter -->
             <div class="meetup-filter col-lg-3 py-4 bg-primary-dark">
               <p
-                class="d-none d-sm-block pb-6 mb-4 border-bottom border-primary-light fs-5 text-center"
+                class="d-none d-lg-block pb-6 mb-4 border-bottom border-primary-light fs-5 text-center"
               >
                 條件篩選
               </p>
-              <p class="d-sm-none meetup-filter-label">
+              <p class="d-md-none meetup-filter-label">
                 篩選
                 <span class="meetup-filter-icon-back material-icons">
                   arrow_back
@@ -50,7 +49,7 @@
                 </span>
               </p>
               <div class="row d-lg-block">
-                <div class="col-sm-4 col-lg-12 mb-2">
+                <div class="col-md-4 col-lg-12 mb-2">
                   <p class="text-primary-light mb-1">地區</p>
                   <div class="dropdown w-100">
                     <a
@@ -92,7 +91,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-sm-4 col-lg-12 mb-2">
+                <div class="col-md-4 col-lg-12 mb-2">
                   <p class="text-primary-light mb-1">KTV種類</p>
                   <div class="dropdown w-100">
                     <a
@@ -114,7 +113,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-sm-4 col-lg-12 mb-6">
+                <div class="col-md-4 col-lg-12 mb-6">
                   <p class="text-primary-light mb-1">日期</p>
                   <div class="dropdown w-100">
                     <a
@@ -146,6 +145,7 @@
                 </div>
               </div>
             </div>
+            <!-- meetup-event -->
             <div class="meetup-event col-lg-9">
               <ul
                 class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-6 mb-12"
@@ -154,7 +154,10 @@
                   <div
                     class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
                   >
-                    <img src="../assets/images/create/mic.png" alt="mic" />
+                    <img
+                      src="../assets/images/create/partyworld.png"
+                      alt="partyworld"
+                    />
                     <div class="card-body bg-primary-medium">
                       <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
                       <div class="d-flex mb-1">
@@ -176,10 +179,7 @@
                   <div
                     class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
                   >
-                    <img
-                      src="../assets/images/create/partyworld.png"
-                      alt="partyworld"
-                    />
+                    <img src="../assets/images/create/mic.png" alt="mic" />
                     <div class="card-body bg-primary-medium">
                       <h3 class="fs-5 mb-2">9/24 松江錢櫃</h3>
                       <div class="d-flex mb-1">

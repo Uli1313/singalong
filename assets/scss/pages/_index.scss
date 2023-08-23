@@ -25,7 +25,6 @@
 .banner {
   height: 100vh;
   background: $primary-gradient;
-  border-radius: 0 0 240px 240px;
   &-group {
     // 1. 子層含有 position-absolute，使其高度 = 0，所以也要指定高度
     // 2. 有設定 rotate，在高度只有 100 vh 的情況下，畫面上會出現空白，
@@ -49,7 +48,6 @@
     width: 65%;
   }
   @include pad-ls {
-    border-radius: 0 0 120px 120px;
     &-img-1,
     &-img-2,
     &-img-3 {

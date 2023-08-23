@@ -170,3 +170,7 @@
 .h-0 {
   height: 0;
 }
+
+.c-min-hight {
+  min-height: calc(100vh - 74px - 112px);
+}

@@ -4,3 +4,12 @@
     transform: translateY(-4px);
   }
 }
+.card-ls-img {
+  width: 180px;
+  @include pad {
+    width: 120px;
+  }
+  @include mobile-po {
+    width: 100px;
+  }
+}
