@@ -69,7 +69,7 @@
   </div>
 </nav>
 </div>
-    <div class="bg-primary-dark">
+    <div class="bg-primary-dark c-min-hight">
       <div class="container-fluid pt-10">
         <!-- breadcrumb -->
         <nav
@@ -79,16 +79,16 @@
         >
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-            <li class="breadcrumb-item active" aria-current="page">揪團列表</li>
+            <li class="breadcrumb-item active" aria-current="page">我的揪團</li>
           </ol>
         </nav>
         <!-- main -->
         <main>
           <div class="row position-relative">
             <!-- meetup-filter -->
-            <div class="meetup-filter col-lg-3 py-4 bg-primary-dark">
+            <div class="meetup-filter col-xl-3 py-4 bg-primary-dark">
               <p
-                class="d-none d-lg-block pb-6 mb-4 border-bottom border-primary-light fs-5 text-center"
+                class="d-none d-xl-block pb-6 mb-4 border-bottom border-primary-light fs-5 text-center"
               >
                 條件篩選
               </p>
@@ -101,8 +101,8 @@
                   arrow_forward
                 </span>
               </p>
-              <div class="row d-lg-block">
-                <div class="col-md-4 col-lg-12 mb-2">
+              <div class="row d-xl-block">
+                <div class="col-md-3 col-xl-12 mb-2">
                   <p class="text-primary-light mb-1">地區</p>
                   <div class="dropdown w-100">
                     <a
@@ -144,7 +144,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-4 col-lg-12 mb-2">
+                <div class="col-md-3 col-xl-12 mb-2">
                   <p class="text-primary-light mb-1">KTV種類</p>
                   <div class="dropdown w-100">
                     <a
@@ -166,7 +166,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-4 col-lg-12 mb-6">
+                <div class="col-md-3 col-xl-12 mb-2">
                   <p class="text-primary-light mb-1">日期</p>
                   <div class="dropdown w-100">
                     <a
@@ -188,6 +188,28 @@
                     </ul>
                   </div>
                 </div>
+                <div class="col-md-3 col-xl-12 mb-6">
+                  <p class="text-primary-light mb-1">揪團狀態</p>
+                  <div class="dropdown w-100">
+                    <a
+                      class="dropdown-toggle border border-primary-light py-3 px-4 rounded-3 text-white w-100 d-flex justify-content-between align-items-center"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      揪團中<span class="material-icons"> expand_more </span>
+                    </a>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuLink"
+                    >
+                      <li><a class="dropdown-item" href="#">揪團中</a></li>
+                      <li><a class="dropdown-item" href="#">已結束</a></li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="col-12">
                   <div
                     class="d-flex align-items-center border border-primary-light rounded-2"
@@ -198,27 +220,37 @@
                 </div>
               </div>
             </div>
-            <!-- meetup-event -->
-            <div class="meetup-event col-lg-9">
+            <!-- my-meetup-event -->
+            <div class="meetup-event col-xl-9">
               <ul
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-6 mb-12"
+                class="row row-gap-6 mb-12 justify-content-center justify-content-md-start"
               >
-                <li class="col">
+                <li class="col-12 col-sm-10 col-md-6">
                   <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow flex-row"
                   >
                     <img
                       src="/singalong/assets/partyworld-36aaa4f3.png"
                       alt="partyworld"
+                      class="card-ls-img"
                     />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">台北錢櫃唱歌++</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
+
+                    <div
+                      class="card-body bg-primary-medium d-flex flex-column justify-content-center"
+                    >
+                      <h3 class="fs-6 fs-md-5 mb-3 mb-lg-6">台北錢櫃唱歌++</h3>
+                      <div
+                        class="fs-14 fs-md-6 d-flex align-items-center mb-1 mb-lg-3"
+                      >
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          schedule
+                        </span>
                         <p>09/22 (五) 20:00 - 23:00</p>
                       </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
+                      <div class="fs-14 fs-md-6 d-flex align-items-center">
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          location_on
+                        </span>
                         <p>錢櫃 - 台北林森店</p>
                       </div>
                     </div>
@@ -228,19 +260,31 @@
                     ></a>
                   </div>
                 </li>
-                <li class="col">
+                <li class="col-12 col-sm-10 col-md-6">
                   <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow flex-row"
                   >
-                    <img src="/singalong/assets/mic-f112de9a.png" alt="mic" />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">9/24 松江錢櫃</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
+                    <img
+                      src="/singalong/assets/mic-f112de9a.png"
+                      alt="mic"
+                      class="card-ls-img"
+                    />
+                    <div
+                      class="card-body bg-primary-medium d-flex flex-column justify-content-center"
+                    >
+                      <h3 class="fs-6 fs-md-5 mb-3 mb-lg-6">9/24 松江錢櫃</h3>
+                      <div
+                        class="fs-14 fs-md-6 d-flex align-items-center mb-1 mb-lg-3"
+                      >
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          schedule
+                        </span>
                         <p>09/24 (日) 13:00 - 16:00</p>
                       </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
+                      <div class="fs-14 fs-md-6 d-flex align-items-center">
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          location_on
+                        </span>
                         <p>錢櫃 - 台北松江店</p>
                       </div>
                     </div>
@@ -250,170 +294,34 @@
                     ></a>
                   </div>
                 </li>
-                <li class="col">
+                <li class="col-12 col-sm-10 col-md-6">
                   <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
+                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow flex-row"
                   >
                     <img
                       src="/singalong/assets/holidayktv-0406e5f2.png"
                       alt="holidayktv"
+                      class="card-ls-img"
                     />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">彰化好樂迪GOGO</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>09/24 (日) 09:00 - 12:00</p>
+                    <div
+                      class="card-body bg-primary-medium d-flex flex-column justify-content-center"
+                    >
+                      <h3 class="fs-6 fs-md-5 mb-3 mb-lg-6">
+                        臺北好樂迪 10/21 晚上
+                      </h3>
+                      <div
+                        class="fs-14 fs-md-6 d-flex align-items-center mb-1 mb-lg-3"
+                      >
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          schedule
+                        </span>
+                        <p>10/21 (六) 18:00 - 22:00</p>
                       </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>好樂迪 - 彰化員林店</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img
-                      src="/singalong/assets/karaoke-0a8f0347.png"
-                      alt="karaoke"
-                    />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">台中揪日K</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>09 /26 (二) 14:00 - 17:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>JapanMelody</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img
-                      src="/singalong/assets/holidayktv-0406e5f2.png"
-                      alt="holidayktv"
-                    />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">9/27桃園練歌團</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>09/27 (三) 19:00 - 22:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>好樂迪 - 桃園復興店</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img
-                      src="/singalong/assets/enjoyyourlife-00f5798b.png"
-                      alt="enjoyyourlife"
-                    />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">台南享溫馨 19:00</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>09/29 (五) 19:00 - 23:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>享溫馨 - 台南中華店</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img
-                      src="/singalong/assets/partyworld-36aaa4f3.png"
-                      alt="mic"
-                    />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">台中平日唱歌</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>10/09 (一) 13:00 - 16:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>錢櫃 - 台中自由店</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img
-                      src="/singalong/assets/silverbox-a470ccc4.png"
-                      alt="silverbox"
-                    />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">10/19 逢甲夜唱</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>10/19 (四) 22:00 - 6:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>銀櫃 - 逢甲店</p>
-                      </div>
-                    </div>
-                    <a
-                      href="meetup-information.html"
-                      class="stretched-link"
-                    ></a>
-                  </div>
-                </li>
-                <li class="col">
-                  <div
-                    class="card border-0 rounded-4 overflow-hidden bg-transparent shadow"
-                  >
-                    <img src="/singalong/assets/mic2-52f05564.png" alt="mic" />
-                    <div class="card-body bg-primary-medium">
-                      <h3 class="fs-5 mb-2">台中美樂地白天場</h3>
-                      <div class="d-flex mb-1">
-                        <span class="material-icons me-2"> schedule </span>
-                        <p>10/20 (五) 12:00 - 16:00</p>
-                      </div>
-                      <div class="d-flex">
-                        <span class="material-icons me-2"> location_on </span>
-                        <p>台中美樂地KTV</p>
+                      <div class="fs-14 fs-md-6 d-flex align-items-center">
+                        <span class="material-icons me-2 fs-6 fs-md-4">
+                          location_on
+                        </span>
+                        <p>好樂迪KTV 錦州店</p>
                       </div>
                     </div>
                     <a
@@ -423,42 +331,12 @@
                   </div>
                 </li>
               </ul>
-              <nav aria-label="Page navigation ">
-  <ul class="pagination justify-content-center mb-80">
-    <li class="page-item">
-      <a
-        class="page-link text-white border-primary-light"
-        href="##"
-        aria-label="Previous"
-      >
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item active">
-      <a class="page-link text-white border-primary-light" href="##">1</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link text-white border-primary-light" href="##">2</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link text-white border-primary-light" href="##">3</a>
-    </li>
-    <li class="page-item">
-      <a
-        class="page-link text-white border-primary-light"
-        href="##"
-        aria-label="Next"
-      >
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
             </div>
           </div>
         </main>
       </div>
-      <footer class="bg-primary-gradient">
+    </div>
+    <footer class="bg-primary-gradient">
   <div class="container-fluid py-5">
     <div class="row align-items-center">
       <ul
@@ -515,7 +393,6 @@
     ><i class="bi bi-arrow-up-circle-fill"></i
   ></a>
 </footer>
-    </div>
 
     
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iscroll/5.2.0/iscroll.min.js"></script> -->
@@ -536,7 +413,7 @@
           meetupFilter.style.left = "100%";
           meetupFilterBack.style.display = "inline-block";
           meetupFIlterForward.style.display = "none";
-          meetupEvent.style.pointerEvents = "auto";
+          // meetupEvent.style.pointerEvents = "auto";
           isMoved = false;
         } else {
           meetupFilter.style.left = "20%";
@@ -546,20 +423,10 @@
             "block",
             "important"
           );
-          meetupEvent.style.pointerEvents = "none";
+          // meetupEvent.style.pointerEvents = "none";
           isMoved = true;
         }
       });
-
-      // function loaded() {
-      //   myScroll = new IScroll(".meetup-filter-aria", {
-      //     mouseWheel: true, // 允許滑鼠滾輪滾動
-      //     scrollbars: true, // 顯示滾動條
-      //     interactiveScrollbars: true, // 允許使用手指拖動滾動條
-      //     shrinkScrollbars: "scale",
-      //     fadeScrollbars: true,
-      //   });
-      // }
     </script>
   </body>
 </html>
