@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
+    <title>建立揪團 | SINGALONG</title>
+    <script type="module" crossorigin src="/singalong/assets/main-5d400576.js"></script>
+    <link rel="stylesheet" href="/singalong/assets/main-6b5dbde2.css">
+  </head>
+  <body>
+    <div class="bg-primary-gradient"><!-- nav 下 position-relative 來避免被 banner-group 覆蓋的問題 -->
+<nav
+  class="navbar navbar-expand-md navbar-dark bg-tranparent position-relative"
+>
+  <div class="container-fluid">
+    <a class="en-font navbar-brand logo-sm fs-2" href="index.html">SINGALONG</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="create1.html">建立揪團</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="meetup-list.html">揪團列表</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="my-songs-all.html">我的歌本</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="material-icons"> account_circle </span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="my-account.html">我的帳戶</a>
+            </li>
+            <li><a class="dropdown-item" href="my-meetup.html">我的揪團</a></li>
+            <li><a class="dropdown-item" href="login.html">登出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+    <div class="bg-primary-dark c-min-hight">
+      <div class="container-fluid pt-10">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-4"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">我的歌本</li>
+          </ol>
+        </nav>
+        <!-- main -->
+        <main>
+          <!-- song-select -->
+          <div class="row">
+  <div class="col-xl-10 mx-auto">
+    <ul
+      class="d-flex fs-md-5 border-bottom border-primary-light mb-4 overflow-auto scroll-ls"
+    >
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span class="deco-circle-sm fw-bold"
+            >全部</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class=""
+            >國語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class=""
+            >台語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class=""
+            >日語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class=""
+            >必點</span
+          ></a
+        >
+      </li>
+      <li>
+        <span
+          class="material-icons fs-2 text-primary-light hover-text-white mx-2 my-2 my-md-4 pointer"
+        >
+          add_circle_outline
+        </span>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center gap-4 mb-8">
+      <div
+        class="d-flex align-items-center border border-primary-light rounded-2 flex-grow-1"
+      >
+        <input
+          type="search"
+          class="form-control border-0"
+          placeholder="關鍵字搜尋"
+        />
+        <span
+          class="material-icons px-4 pointer text-primary-light hover-text-white"
+        >
+          search
+        </span>
+      </div>
+      <div
+        class="form-check form-switch ps-0 d-none"
+      >
+        <input
+          class="form-check-input ms-0 me-1"
+          type="checkbox"
+          id="isPublic"
+          checked
+          disabled
+        />
+        <label class="form-check-label" for="isPublic">公開</label>
+      </div>
+      <div
+        class="btn py-1 px-4 btn-primary rounded-2 fs-6 d-none"
+      >
+        <i class="bi bi-pencil-square me-1"></i><span>編輯</span>
+      </div>
+    </div>
+  </div>
+</div>
+          <!-- song-list -->
+          <div class="row justify-content-center">
+            <div class="col-xl-10">
+              <ul class="row song-list scroll-po">
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        蒙娜麗莎的眼淚
+                      </p>
+                    </div>
+                    <p class="song-singer">林志炫</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        メタモルフォーゼ
+                      </p>
+                    </div>
+                    <p class="song-singer">工藤静香</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        to the beginning
+                      </p>
+                    </div>
+                    <p class="song-singer">Kalafina</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        恋しさと せつなさと 心強さと
+                      </p>
+                    </div>
+                    <p class="song-singer">篠原涼子</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        是不是這樣的夜晚你才會這樣的想起我
+                      </p>
+                    </div>
+                    <p class="song-singer">吳宗憲</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">Golden Sky</p>
+                    </div>
+                    <p class="song-singer">SMiLE.dk</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        第一次愛的人
+                      </p>
+                    </div>
+                    <p class="song-singer">王心凌</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">無人熟識</p>
+                    </div>
+                    <p class="song-singer">張清芳</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        Perseus -ペルセウス-
+                      </p>
+                    </div>
+                    <p class="song-singer">島谷ひとみ</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">月桂女神</p>
+                    </div>
+                    <p class="song-singer">S.H.E</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <!-- copy -->
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        蒙娜麗莎的眼淚
+                      </p>
+                    </div>
+                    <p class="song-singer">林志炫</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        メタモルフォーゼ
+                      </p>
+                    </div>
+                    <p class="song-singer">工藤静香</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        to the beginning
+                      </p>
+                    </div>
+                    <p class="song-singer">Kalafina</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        恋しさと せつなさと 心強さと
+                      </p>
+                    </div>
+                    <p class="song-singer">篠原涼子</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        是不是這樣的夜晚你才會這樣的想起我
+                      </p>
+                    </div>
+                    <p class="song-singer">吳宗憲</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">Golden Sky</p>
+                    </div>
+                    <p class="song-singer">SMiLE.dk</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        第一次愛的人
+                      </p>
+                    </div>
+                    <p class="song-singer">王心凌</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">無人熟識</p>
+                    </div>
+                    <p class="song-singer">張清芳</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">
+                        Perseus -ペルセウス-
+                      </p>
+                    </div>
+                    <p class="song-singer">島谷ひとみ</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+                <li class="col-md-6">
+                  <div class="song">
+                    <div class="song-title">
+                      <p class="song-title-content js-song-title">月桂女神</p>
+                    </div>
+                    <p class="song-singer">S.H.E</p>
+                    <a href="##" class="song-play"
+                      ><span class="song-play-icon material-icons">
+                        play_circle
+                      </span></a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="bg-primary-gradient">
+  <div class="container-fluid py-4">
+    <div class="row align-items-center">
+      <ul
+        class="col-lg-4 d-flex gap-12 mb-2 mb-lg-0 justify-content-center order-lg-1"
+      >
+        <li>
+          <a href="##" class="footer-icon facebook text-white">
+            <i class="bi bi-facebook fs-2"></i>
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-facebook"
+              viewBox="-1 -1 18 18"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+              />
+            </svg> -->
+          </a>
+        </li>
+        <li>
+          <a href="##" class="footer-icon instagram text-white">
+            <i class="bi bi-instagram fs-2"></i>
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="-1 -1 18 18"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              /></svg
+          > -->
+          </a>
+        </li>
+        <li>
+          <a href="##" class="footer-icon twitter text-white">
+            <i class="fa-brands fa-x-twitter fs-2" style="margin-top: 10px"></i
+            ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              
+              <path
+                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+              />
+              </svg> -->
+          </a>
+        </li>
+      </ul>
+      <div class="col-lg-4 order-lg-0 fs-14 fs-md-6">
+        <p>Copyright © 2023 SINGALONG. All rights reserved.</p>
+        <p>本網站僅作為個人練習作品，無任何商業用途</p>
+      </div>
+    </div>
+  </div>
+  <!-- back to top -->
+  <a
+    href="#"
+    class="back fixed-bottom fs-48 text-white"
+    style="right: 3%; bottom: 5%; left: auto"
+    ><i class="bi bi-arrow-up-circle-fill"></i
+  ></a>
+</footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+      // 滾動條停止滾動時消失
+      let scrollTimer;
+      const scrollLs = document.querySelector(".scroll-ls");
+
+      scrollLs.addEventListener("scroll", function () {
+        clearTimeout(scrollTimer);
+        this.classList.add("scrolling");
+
+        scrollTimer = setTimeout(() => {
+          this.classList.remove("scrolling");
+        }, 1000);
+      });
+
+      // 歌名過長自動滾動
+      let songTitles = document.querySelectorAll(".js-song-title");
+      let scrollIntervals = [];
+
+      songTitles.forEach(function (songTitle) {
+        songTitle.addEventListener("mouseenter", function () {
+          if (songTitle.scrollWidth > songTitle.clientWidth) {
+            let d = songTitle.scrollWidth - songTitle.clientWidth;
+            songTitle.style.transition = "left 1s linear";
+            songTitle.style.left = -d + "px";
+          }
+        });
+
+        songTitle.addEventListener("mouseleave", function () {
+          songTitle.style.transition = "none";
+          songTitle.style.left = "0";
+          scrollIntervals.forEach(function (interval) {
+            clearInterval(interval);
+          });
+          scrollIntervals = [];
+        });
+      });
+    </script>
+  </body>
+</html>
