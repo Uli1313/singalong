@@ -1,0 +1,97 @@
+<div class="row">
+  <div class="col-xl-10 mx-auto">
+    <ul
+      class="d-flex fs-md-5 border-bottom border-primary-light mb-4 overflow-auto scroll-ls"
+    >
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span class="<%= page === 'all' ? 'deco-circle-sm fw-bold' : '' %>"
+            >全部</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class="<%= page === 'chinese' ? 'deco-circle-sm fw-bold' : '' %>"
+            >國語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class="<%= page === 'taiwanese' ? 'deco-circle-sm fw-bold' : '' %>"
+            >台語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class="<%= page === 'japanese' ? 'deco-circle-sm fw-bold' : '' %>"
+            >日語</span
+          ></a
+        >
+      </li>
+      <li>
+        <a
+          href="##"
+          class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
+          ><span
+            class="<%= page === 'essential' ? 'deco-circle-sm fw-bold' : '' %>"
+            >必點</span
+          ></a
+        >
+      </li>
+      <li>
+        <span
+          class="material-icons fs-2 text-primary-light hover-text-white mx-2 my-2 my-md-4 pointer"
+        >
+          add_circle_outline
+        </span>
+      </li>
+    </ul>
+    <div class="d-flex align-items-center gap-4 mb-8">
+      <div
+        class="d-flex align-items-center border border-primary-light rounded-2 flex-grow-1"
+      >
+        <input
+          type="search"
+          class="form-control border-0"
+          placeholder="關鍵字搜尋"
+        />
+        <span
+          class="material-icons px-4 pointer text-primary-light hover-text-white"
+        >
+          search
+        </span>
+      </div>
+      <div
+        class="form-check form-switch ps-0 <%= page ==='all' ? 'd-none' : '' %>"
+      >
+        <input
+          class="form-check-input ms-0 me-1"
+          type="checkbox"
+          id="isPublic"
+          checked
+          disabled
+        />
+        <label class="form-check-label" for="isPublic">公開</label>
+      </div>
+      <div
+        class="btn py-1 px-4 btn-primary rounded-2 fs-6 <%= page ==='all' ? 'd-none' : '' %>"
+      >
+        <i class="bi bi-pencil-square me-1"></i><span>編輯</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.song-list {
+  overflow: auto;
+  max-height: calc(100vh - 420px);
+  row-gap: 16px;
+}
+.song {
+  border: 1px solid $primary-light;
+  border-radius: 50rem;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &-title {
+    overflow: hidden;
+    width: 100%;
+    &-content {
+      position: relative;
+      white-space: nowrap;
+      transition: left 2s linear;
+      left: 0;
+    }
+  }
+  &-singer {
+    color: $primary-light;
+    white-space: nowrap;
+  }
+  &-play {
+    color: white;
+    line-height: 0;
+    &:hover {
+      color: $primary;
+    }
+    &-icon {
+      font-size: 40px;
+    }
+  }
+}

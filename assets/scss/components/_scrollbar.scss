@@ -1,0 +1,27 @@
+.scroll-ls,
+.scroll-po {
+  &::-webkit-scrollbar-track-piece {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+.scroll-ls {
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: transparent;
+  }
+}
+.scroll-po {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $primary-medium;
+  }
+}
+.scroll-ls.scrolling::-webkit-scrollbar-thumb {
+  background-color: $primary-medium;
+}
