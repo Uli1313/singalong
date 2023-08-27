@@ -1,7 +1,11 @@
 .song-list {
   overflow: auto;
-  max-height: calc(100vh - 420px);
+  height: calc(100vh - 420px);
   row-gap: 16px;
+  margin-bottom: 40px;
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
 }
 .song {
   border: 1px solid $primary-light;
