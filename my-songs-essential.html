@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
     />
-    <title>我的歌本 | SINGALONG</title>
+    <title>建立揪團 | SINGALONG</title>
     <script type="module" crossorigin src="/singalong/assets/main-76539755.js"></script>
     <link rel="stylesheet" href="/singalong/assets/main-bc5a34bd.css">
   </head>
@@ -102,7 +102,7 @@
         <a
           href="my-songs-all.html"
           class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
-          ><span class="deco-circle-sm fw-bold"
+          ><span class=""
             >全部</span
           ></a
         >
@@ -142,7 +142,7 @@
           href="my-songs-essential.html"
           class="link-unstyled text-white px-6 px-md-15 py-3 py-md-4 hover-fw-bold text-nowrap"
           ><span
-            class=""
+            class="deco-circle-sm fw-bold"
             >必點</span
           ></a
         >
@@ -193,7 +193,7 @@
         </div>
         <!-- isPublic -->
         <div
-          class="form-check form-switch ps-0 d-none"
+          class="form-check form-switch ps-0 "
         >
           <input
             class="form-check-input ms-0 me-1"
@@ -208,7 +208,7 @@
         </div>
         <!-- edit -->
         <div
-          class="btn py-1 px-4 btn-primary rounded-2 fs-6 d-none"
+          class="btn py-1 px-4 btn-primary rounded-2 fs-6 "
           id="edit-playlist"
         >
           <i class="bi bi-pencil-square me-1"></i><span>編輯</span>
@@ -516,7 +516,6 @@
         </main>
       </div>
     </div>
-
     <footer class="bg-primary-gradient">
   <div class="container-fluid py-4">
     <div class="row align-items-center">
@@ -581,6 +580,56 @@
   ></a>
 </footer>
 
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="create-playlist"
+      tabindex="-1"
+      aria-labelledby="create-playlistLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content bg-primary-dark border border-primary-light border-2 rounded-4 p-4"
+        >
+          <div class="d-flex justify-content-end border-0">
+            <span
+              type="button"
+              class="material-icons"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              close
+            </span>
+          </div>
+          <h5 class="text-center fs-3 mb-8" id="create-playlistLabel">
+            新增歌本
+          </h5>
+          <div class="d-flex align-items-center gap-2 px-10 mb-8">
+            <label for="create-playlist-name" class="text-nowrap">名稱</label>
+            <input
+              type="text"
+              id="create-playlist-name"
+              class="form-control border border-primary-light border-1 rounded-2"
+              placeholder="請輸入歌本名稱"
+            />
+          </div>
+          <div class="d-flex border-0 justify-content-evenly mb-8">
+            <a href="##" type="button" class="btn btn-major rounded-pill">
+              建立
+            </a>
+            <a
+              type="button"
+              class="btn btn-minor rounded-pill"
+              data-bs-dismiss="modal"
+            >
+              取消
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
@@ -618,6 +667,42 @@
           });
           scrollIntervals = [];
         });
+      });
+
+      // 編輯歌本
+      const editPlaylist = document.querySelector("#edit-playlist");
+      const public = document.querySelector("#public");
+      const publicContent = document.querySelector("#public-content");
+      const addSongs = document.querySelector("#add-songs");
+      const deleteSongs = document.querySelector("#delete-songs");
+      let isEdit = false;
+
+      editPlaylist.addEventListener("click", function () {
+        if (isEdit) {
+          let str = "<i class='bi bi-pencil-square me-1'></i><span>編輯</span>";
+          this.innerHTML = str;
+          public.disabled = !public.disabled;
+          addSongs.style.display = "none";
+          deleteSongs.style.display = "none";
+          isEdit = false;
+        } else {
+          let str = "<i class='bi bi-check-lg me-1'></i><span>儲存</span>";
+          this.innerHTML = str;
+          public.disabled = !public.disabled;
+          addSongs.style.display = "block";
+          deleteSongs.style.display = "block";
+          isEdit = true;
+        }
+      });
+
+      public.addEventListener("click", function () {
+        if (public.checked) {
+          publicContent.innerHTML = "公開";
+        }
+        if (!public.checked) {
+          publicContent.innerHTML = "不公開";
+          console.log(public.checked);
+        }
       });
     </script>
   </body>
