@@ -178,16 +178,16 @@
         <!-- add & delete songs -->
         <span
           type="button"
-          class="btn btn-outline-success rounded-2 fs-6 py-1 px-4"
+          class="js-add-songs btn btn-outline-success rounded-2 fs-6 py-1 px-4"
           style="display: none"
-          id="add-songs"
+          data-bs-target="#addSongsModal"
+          data-bs-toggle="modal"
           >新增<span class="d-none d-md-inline-block">歌曲</span></span
         >
         <div
           type="button"
-          class="btn btn-outline-danger rounded-2 fs-6 py-1 px-4 text-nowrap"
+          class="js-delete-songs btn btn-outline-danger rounded-2 fs-6 py-1 px-4 text-nowrap"
           style="display: none"
-          id="delete-songs"
         >
           刪除<span class="d-none d-md-inline-block">歌曲</span>
         </div>
@@ -212,6 +212,80 @@
           id="edit-playlist"
         >
           <i class="bi bi-pencil-square me-1"></i><span>編輯</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="addSongsModal"
+  tabindex="-1"
+  aria-labelledby="addSongsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div
+      class="modal-content bg-primary-dark border border-primary-light border-2 rounded-4 p-4"
+    >
+      <div class="d-flex justify-content-end border-0 mb-1">
+        <span
+          type="button"
+          class="material-icons"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          close
+        </span>
+      </div>
+      <div class="container-fluid">
+        <div class="row border-1">
+          <div class="col-md-5 border-end border-primary-light text-center">
+            <div class="h-100 d-flex flex-column justify-content-center">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control border border-primary-light rounded-2"
+                  id="addSongsModalSongTitle"
+                  placeholder="歌名"
+                />
+                <label for="addSongsModalSongTitle">歌名</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control border border-primary-light rounded-2"
+                  id="addSongsModalSinger"
+                  placeholder="演唱者"
+                />
+                <label for="addSongsModalSinger">演唱者</label>
+              </div>
+              <a href="##" class="btn btn-success rounded-2 fs-6 py-1 px-4"
+                >加入清單</a
+              >
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="d-flex flex-column">
+              <div
+                class="border border-primary-light rounded-2 p-4 mb-3"
+                style="height: 400px"
+              >
+                <div
+                  class="text-primary-light fs-4 text-center"
+                  style="line-height: 368px"
+                >
+                  還沒有任何歌曲喔
+                </div>
+              </div>
+              <a
+                href="##"
+                class="btn btn-major rounded-2 fs-6 py-2 px-6 ms-auto"
+                >加入歌本</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
