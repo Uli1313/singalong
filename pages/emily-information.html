@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
+    />
+    <title>用戶檔案 | SINGALONG</title>
+  </head>
+  <body>
+    <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
+    <div class="bg-primary-dark c-min-hight">
+      <div class="container-fluid pt-10">
+        <!-- breadcrumb -->
+        <nav
+          style="--bs-breadcrumb-divider: '>'"
+          aria-label="breadcrumb"
+          class="mb-4"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">用戶檔案</li>
+          </ol>
+        </nav>
+        <div class="row justify-content-center">
+          <!-- aside -->
+          <aside class="col-md-4 col-lg-3 col-xl-3 mb-3 mb-md-0">
+            <div class="bg-primary-medium rounded-4 p-6 p-lg-10">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-6 col-md-12 mb-md-2">
+                  <img
+                    src="../assets/images/emily.png"
+                    alt="Emily"
+                    class="rounded-circle"
+                  />
+                </div>
+                <ul
+                  class="col-6 col-md-12 text-center d-flex flex-column justify-content-center"
+                >
+                  <h2
+                    class="text-start text-md-center fs-4 pb-2 mb-4 border-bottom border-primary-light"
+                  >
+                    Emily
+                  </h2>
+                  <li>
+                    <a
+                      href="##"
+                      class="text-white text-decoration-none deco-circle-sm py-2 mb-2"
+                      >關於我</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="emily-songs.html"
+                      class="text-white text-decoration-none py-2"
+                      >歌本一覽</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+          <!-- main -->
+          <main class="col-md-8 col-lg-9 col-xl-8 mb-4 mb-md-0">
+            <div
+              class="information-min-hight border-md border-primary-light-c rounded-4 p-4 p-md-10"
+            >
+              <h3
+                class="fs-5 fs-md-4 border-bottom border-primary-light pb-4 mb-4"
+              >
+                關於我
+              </h3>
+              <p style="line-height: 2.5">
+                嘿！我是Emily，喜歡唱歌🎤 <br />
+                我愛用音樂表達自己<br />
+                讓歌聲帶著大家一起跳舞、笑和感動<br />
+                從流行到搖滾，我都喜歡~ <br />
+                一起來享受音樂的魔力吧🎶🎶🎶
+              </p>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+      // 滾動條停止滾動時消失
+      let scrollTimer;
+      const scrollLs = document.querySelector(".scroll-ls");
+
+      scrollLs.addEventListener("scroll", function () {
+        clearTimeout(scrollTimer);
+        this.classList.add("scrolling");
+
+        scrollTimer = setTimeout(() => {
+          this.classList.remove("scrolling");
+        }, 1000);
+      });
+
+      // 歌名過長自動滾動
+      let songTitles = document.querySelectorAll(".js-song-title");
+      let scrollIntervals = [];
+
+      songTitles.forEach(function (songTitle) {
+        songTitle.addEventListener("mouseenter", function () {
+          if (songTitle.scrollWidth > songTitle.clientWidth) {
+            let d = songTitle.scrollWidth - songTitle.clientWidth;
+            songTitle.style.transition = "left 1s linear";
+            songTitle.style.left = -d + "px";
+          }
+        });
+
+        songTitle.addEventListener("mouseleave", function () {
+          songTitle.style.transition = "none";
+          songTitle.style.left = "0";
+          scrollIntervals.forEach(function (interval) {
+            clearInterval(interval);
+          });
+          scrollIntervals = [];
+        });
+      });
+
+      // 編輯歌本
+      const editPlaylist = document.querySelector("#edit-playlist");
+      const public = document.querySelector("#public");
+      const publicContent = document.querySelector("#public-content");
+      const addSongs = document.querySelector(".js-add-songs");
+      const deleteSongs = document.querySelector(".js-delete-songs");
+      let isEdit = false;
+
+      editPlaylist.addEventListener("click", function () {
+        if (isEdit) {
+          let str = "<i class='bi bi-pencil-square me-1'></i><span>編輯</span>";
+          this.innerHTML = str;
+          public.disabled = !public.disabled;
+          addSongs.style.display = "none";
+          deleteSongs.style.display = "none";
+          isEdit = false;
+        } else {
+          let str = "<i class='bi bi-check-lg me-1'></i><span>儲存</span>";
+          this.innerHTML = str;
+          public.disabled = !public.disabled;
+          addSongs.style.display = "block";
+          deleteSongs.style.display = "block";
+          isEdit = true;
+        }
+      });
+
+      public.addEventListener("click", function () {
+        if (public.checked) {
+          publicContent.innerHTML = "公開";
+        }
+        if (!public.checked) {
+          publicContent.innerHTML = "不公開";
+          console.log(public.checked);
+        }
+      });
+    </script>
+  </body>
+</html>

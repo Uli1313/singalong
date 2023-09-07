@@ -7,9 +7,9 @@
 @import "./utils/mixin";
 @import "./utils/animations";
 @import "../../node_modules/bootstrap";
-@import "./utils/custom-utilities";
 @import "./utils/utilities";
 @import "../../node_modules/bootstrap/scss/utilities/api";
+@import "./utils/custom-utilities";
 
 @import "./components/button";
 @import "./components/progress";

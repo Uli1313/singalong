@@ -7,6 +7,9 @@
 .lh-37 {
   line-height: 37px;
 }
+.stroke-1 {
+  -webkit-text-stroke: 1px $white;
+}
 .bg-deco {
   @include bg-contain("/assets/images/deco.png");
   background-position: right 0;
@@ -146,6 +149,11 @@
 .fs-48 {
   font-size: 48px;
 }
+.fs-md-48 {
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+  }
+}
 .w-33 {
   width: calc(100% / 3);
 }
@@ -179,6 +187,24 @@
 
 .c-min-hight {
   min-height: calc(100vh - 74px - 80px);
+}
+.b-min-hight {
+  min-height: calc(100vh - 40vh - 80px - 40px - 42px);
+}
+.information-min-hight {
+  @include media-breakpoint-up(md) {
+    min-height: calc(100vh - 74px - 40px - 24px - 16px - 80px - 40px);
+  }
+}
+
+.h-add-songs {
+  height: 200px;
+  @include media-breakpoint-up(lg) {
+    height: 400px;
+  }
+}
+.border-primary-light-c {
+  border-color: $primary-light !important;
 }
 
 .link-unstyled {
