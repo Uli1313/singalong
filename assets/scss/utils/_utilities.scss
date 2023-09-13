@@ -649,6 +649,7 @@ $utilities: map-merge(
       (
         property: background-color,
         class: bg,
+        responsive: true,
         local-vars: (
           "bg-opacity": 1,
         ),
@@ -726,6 +727,7 @@ $utilities: map-merge(
     "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-radius),
       ),

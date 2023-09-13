@@ -8,6 +8,13 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>SINGALONG</title>
   </head>
   <body class="en-font">
@@ -15,7 +22,7 @@
     <div class="bg-primary-dark">
       <header>
         <div class="banner mb-120 overflow-hidden position-relative">
-          <%- include('./layout/header'); -%>
+          <%- include('./layout/header',{dropdownMenuBg: ""}); -%>
           <div class="container-fluid">
             <div class="banner-group position-relative overflow-hidden">
               <div class="banner-img-1 position-absolute">

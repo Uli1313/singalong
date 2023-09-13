@@ -1135,7 +1135,7 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 $navbar-padding-y: $spacer * 0.5 !default;
 $navbar-padding-x: null !default;
 
-$navbar-nav-link-padding-x: 0.5rem !default;
+$navbar-nav-link-padding-x: 1rem; //  0.5rem !default;
 
 $navbar-brand-font-size: $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -1148,7 +1148,7 @@ $navbar-toggler-padding-y: 0.25rem !default;
 $navbar-toggler-padding-x: 0.75rem !default;
 $navbar-toggler-font-size: $font-size-lg !default;
 $navbar-toggler-border-radius: $btn-border-radius !default;
-$navbar-toggler-focus-width: $btn-focus-width !default;
+$navbar-toggler-focus-width: 0; // custom $btn-focus-width !default;
 $navbar-toggler-transition: box-shadow 0.15s ease-in-out !default;
 
 $navbar-light-color: rgba($black, 0.55) !default;
@@ -1162,7 +1162,7 @@ $navbar-light-brand-hover-color: $navbar-light-active-color !default;
 // scss-docs-end navbar-variables
 
 // scss-docs-start navbar-dark-variables
-$navbar-dark-color: rgba($white, 0.55) !default;
+$navbar-dark-color: $white; // custom rgba($white, 0.55) !default;
 $navbar-dark-hover-color: rgba($white, 0.75) !default;
 $navbar-dark-active-color: $white !default;
 $navbar-dark-disabled-color: rgba($white, 0.25) !default;
@@ -1183,21 +1183,21 @@ $dropdown-padding-y: 0.5rem !default;
 $dropdown-spacer: 0.125rem !default;
 $dropdown-font-size: $font-size-base !default;
 $dropdown-color: $body-color !default;
-$dropdown-bg: $white !default;
+$dropdown-bg: rgba($black, 0.5); // custom $white !default;
 $dropdown-border-color: var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius: $border-radius !default;
-$dropdown-border-width: $border-width !default;
+$dropdown-border-width: 0; // custom $border-width !default;
 $dropdown-inner-border-radius: subtract(
   $dropdown-border-radius,
   $dropdown-border-width
 ) !default;
 $dropdown-divider-bg: $dropdown-border-color !default;
 $dropdown-divider-margin-y: $spacer * 0.5 !default;
-$dropdown-box-shadow: $box-shadow !default;
+$dropdown-box-shadow: transparent; // custom $box-shadow !default;
 
-$dropdown-link-color: $gray-900 !default;
+$dropdown-link-color: $white; // custom $gray-900 !default;
 $dropdown-link-hover-color: shade-color($dropdown-link-color, 10%) !default;
-$dropdown-link-hover-bg: $gray-200 !default;
+$dropdown-link-hover-bg: transparent; // custom  $gray-200 !default;
 
 $dropdown-link-active-color: $component-active-color !default;
 $dropdown-link-active-bg: $component-active-bg !default;

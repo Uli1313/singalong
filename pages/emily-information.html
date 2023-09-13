@@ -22,7 +22,10 @@
     <title>用戶檔案 | SINGALONG</title>
   </head>
   <body>
-    <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
+    <div class="bg-primary-gradient">
+      <%- include('./layout/header',{dropdownMenuBg:
+      "bg-secondary-gradient-bottom"}); -%>
+    </div>
     <div class="bg-primary-dark c-min-hight">
       <div class="container-fluid pt-10">
         <!-- breadcrumb -->

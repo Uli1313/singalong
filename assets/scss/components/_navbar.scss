@@ -1,0 +1,8 @@
+.navbar {
+  z-index: 1100 !important;
+}
+.dropdown-menu[data-bs-popper] {
+  top: 60px;
+  left: auto;
+  right: 0;
+}

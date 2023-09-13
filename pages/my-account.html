@@ -10,12 +10,22 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css"
     />
     <title>我的帳戶 | SINGALONG</title>
   </head>
   <body>
-    <div class="bg-primary-gradient"><%- include('./layout/header'); -%></div>
+    <div class="bg-primary-gradient">
+      <%- include('./layout/header',{dropdownMenuBg:
+      "bg-secondary-gradient-bottom"}); -%>
+    </div>
     <div class="my-account bg-primary-dark c-min-hight">
       <div class="container-fluid pt-10">
         <!-- breadcrumb -->

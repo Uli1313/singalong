@@ -54,6 +54,10 @@
 .bg-secondary-gradient {
   background: $secondary-gradient;
 }
+.bg-secondary-gradient-bottom {
+  background: $secondary-gradient-bottom;
+}
+
 .bg-left-black-gradient {
   background: linear-gradient(to left, rgba($black, 0.5) 90%, transparent);
 }
