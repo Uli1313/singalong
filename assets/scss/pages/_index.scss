@@ -31,8 +31,8 @@
     // 1. 子層含有 position-absolute，使其高度 = 0，所以也要指定高度
     // 2. 有設定 rotate，在高度只有 100 vh 的情況下，畫面上會出現空白，
     // 所以多 30 vh 去填滿空白，並使用 top 負值來把上方空白也填滿
-    top: -15vh;
-    height: 130vh;
+    top: -20vh;
+    height: 140vh;
     transform: rotate(10deg);
   }
   &-img-1 {

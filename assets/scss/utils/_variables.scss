@@ -1183,7 +1183,7 @@ $dropdown-padding-y: 0.5rem !default;
 $dropdown-spacer: 0.125rem !default;
 $dropdown-font-size: $font-size-base !default;
 $dropdown-color: $body-color !default;
-$dropdown-bg: rgba($black, 0.5); // custom $white !default;
+$dropdown-bg: $primary-dark; // custom $white !default;
 $dropdown-border-color: var(--#{$prefix}border-color-translucent) !default;
 $dropdown-border-radius: $border-radius !default;
 $dropdown-border-width: 0; // custom $border-width !default;
