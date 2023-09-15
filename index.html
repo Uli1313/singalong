@@ -16,12 +16,12 @@
       referrerpolicy="no-referrer"
     />
     <title>SINGALONG</title>
-    <script type="module" crossorigin src="/singalong/assets/main-f104481a.js"></script>
-    <link rel="stylesheet" href="/singalong/assets/main-07c01db3.css">
+    <script type="module" crossorigin src="/singalong/assets/main-018a609f.js"></script>
+    <link rel="stylesheet" href="/singalong/assets/main-80deaae6.css">
   </head>
   <body class="en-font">
     <!-- header -->
-    <div class="bg-primary-dark">
+    <div class="bg-primary-dark overflow-hidden">
       <header>
         <div class="banner mb-120 overflow-hidden position-relative">
           <!-- nav 下 position-relative 來避免被 banner-group 覆蓋的問題 -->
@@ -159,21 +159,21 @@
             <div class="banner-group position-relative overflow-hidden">
               <div class="banner-img-1 position-absolute">
                 <img
-                  src="/singalong/assets/banner-1-dca909b2.png"
+                  src="/singalong/assets/banner-1-a895c646.png"
                   alt="多張人物圖像"
                   class="drop-shadow"
                 />
               </div>
               <div class="banner-img-2 position-absolute">
                 <img
-                  src="/singalong/assets/banner-2-bc1ecb58.png"
+                  src="/singalong/assets/banner-2-71a8c2e6.png"
                   alt="多張人物圖像"
                   class="drop-shadow-lg"
                 />
               </div>
               <div class="banner-img-3 position-absolute">
                 <img
-                  src="/singalong/assets/banner-3-d4e3ef84.png"
+                  src="/singalong/assets/banner-3-2f7dfd43.png"
                   alt="多張人物圖像"
                   class="drop-shadow"
                 />
@@ -182,7 +182,7 @@
             <div
               class="banner-content bg-left-black-gradient position-absolute end-0 top-50 translate-middle-y py-160 py-md-80 ps-100"
             >
-              <h1 class="logo">SINGALONG</h1>
+              <h1 class="logo js-logo">SINGALONG</h1>
               <h2 class="mb-6">尋找一起唱歌的夥伴</h2>
               <a href="meetup-list.html" class="btn btn-major rounded-pill"
                 >看看目前的揪團</a
@@ -195,15 +195,18 @@
       <main>
         <!-- intro -->
         <section class="container-fluid mb-120">
-          <h2 class="mb-80 text-center">
+          <h2 class="mb-80 text-center fs-4 fs-md-2" data-aos="fade-up">
             想找人一起唱歌嗎? <br class="d-md-none" />在
-            <span class="logo-sm fs-1">SINGALONG</span>，你可以……
+            <span class="logo-sm fs-2 fs-md-1">SINGALONG</span>，你可以……
           </h2>
 
           <ul
             class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-6 justify-content-center"
           >
-            <li class="intro-item col position-relative d-flex flex-column">
+            <li
+              class="intro-item col position-relative d-flex flex-column"
+              data-aos="zoom-in"
+            >
               <img
                 src="/singalong/assets/section2-1-8d29715f.png"
                 alt="建立揪團"
@@ -223,7 +226,11 @@
                 </p>
               </div>
             </li>
-            <li class="intro-item col position-relative d-flex flex-column">
+            <li
+              class="intro-item col position-relative d-flex flex-column"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <img
                 src="/singalong/assets/section2-2-9fa629fa.png"
                 alt="加入揪團"
@@ -243,7 +250,11 @@
                 </p>
               </div>
             </li>
-            <li class="intro-item col position-relative d-flex flex-column">
+            <li
+              class="intro-item col position-relative d-flex flex-column"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
               <img
                 src="/singalong/assets/section2-3-75d09694.png"
                 alt="自訂歌本"
@@ -272,6 +283,7 @@
             <div class="row">
               <div
                 class="steps-content col-12 col-md-6 col-lg-4 fs-5 d-flex flex-column align-items-center align-self-sm-end"
+                data-aos="fade-right"
               >
                 <h2 class="mb-8 fs-4 fs-md-2">簡單三步驟，立刻開團</h2>
                 <div class="d-flex flex-column gap-3 mb-8 text-center">
@@ -294,10 +306,14 @@
                   alt="開團步驟畫面1"
                   class="position-absolute drop-shadow"
                   style="right: 20%; top: 35%"
+                  data-aos="fade-left"
+                  data-aos-delay="200"
                 /><img
                   src="/singalong/assets/section3-2-966f9461.png"
                   alt="開團步驟畫面2"
                   class="drop-shadow-lg"
+                  data-aos="fade-left"
+                  data-aos-delay="400"
                 />
               </div>
             </div>
@@ -309,6 +325,7 @@
             <div class="row align-items-center">
               <div
                 class="col-12 col-sm-7 col-lg-5 order-lg-1 ms-auto ms-lg-none mb-10 mb-lg-none"
+                data-aos="fade-left"
               >
                 <h2 class="mb-4 fs-4 fs-md-2">輕鬆找到喜好相近的朋友</h2>
                 <p>
@@ -316,21 +333,29 @@
                 </p>
               </div>
               <div
-                class="col-10 col-sm-8 col-lg-7 position-relative mx-auto mx-sm-0 order-lg-0"
+                class="col-9 col-sm-8 col-lg-7 position-relative mx-auto mx-sm-0 order-lg-0"
               >
                 <img
                   src="/singalong/assets/section4-1-98c9198e.png"
                   alt="相同歌曲列表"
                   class="drop-shadow"
+                  data-aos="fade-right"
+                  data-aos-anchor-placement="center-bottom"
                 />
-                <div class="position-absolute" style="top: 25%; right: 7%">
+                <div
+                  class="position-absolute"
+                  style="top: 25%; right: 7%"
+                  data-aos="fade-right"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-delay="200"
+                >
                   <img
                     src="/singalong/assets/section4-2-673c4972.png"
                     alt="哇!你跟 Emily 有 53 首一樣的歌。重複的歌曲有這些"
                     class="drop-shadow-lg"
                   />
                   <p
-                    class="position-absolute fs-48 fw-bold text-primary"
+                    class="position-absolute fs-1 fs-sm-48 fw-bold text-primary"
                     style="top: 42%; left: 22%"
                   >
                     53
@@ -354,10 +379,15 @@
                 >
                   <img
                     src="/singalong/assets/section5-1-fc9b07d5.png"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
+                    data-aos-duration="700"
                     alt="人物圖片"
                     class="mb-120 drop-shadow-lg mb-md-160"
                   /><img
                     src="/singalong/assets/section5-2-d7c89e2d.png"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-center"
                     alt="人物圖片"
                     class="drop-shadow mb-8 mb-md-0"
                   />
@@ -367,10 +397,14 @@
                 >
                   <img
                     src="/singalong/assets/section5-3-e2e5464a.png"
+                    data-aos="fade-up"
+                    data-aos-duration="600"
                     alt="人物圖片"
                     class="drop-shadow"
                   /><img
                     src="/singalong/assets/section5-4-ba2754da.png"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
                     alt="人物圖片"
                     class="cta-img-4 mb-160 drop-shadow-lg"
                   />
@@ -378,6 +412,7 @@
               </div>
               <div
                 class="cta-title col-12 col-xl-4 col-xxl-5 mb-10 mb-xl-0 text-center order-xl-0"
+                data-aos="zoom-in"
               >
                 <h2 class="mb-4 fs-4 fs-md-2">馬上來尋找你的歌友吧！</h2>
                 <a href="login.html" class="btn btn-major rounded-pill"
@@ -426,7 +461,7 @@
         </li>
         <li>
           <a href="##" class="footer-icon twitter text-white">
-            <i class="fa-brands fa-x-twitter fs-2" style="margin-top: 10px"></i
+            <i class="fa-brands fa-x-twitter fs-2" style="margin-top: 8px"></i
             ><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               
@@ -453,5 +488,33 @@
 </footer>
     </div>
     
+    <script>
+      const logo = document.querySelector(".js-logo");
+      const logoContent = logo.textContent;
+      const logoLettersArr = logoContent.split("");
+      logo.textContent = ""; // 清空文字內容
+
+      logoLettersArr.forEach((letter) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.className = "logo-letter d-inline-block";
+        logo.appendChild(span);
+      });
+
+      const logoLetters = document.querySelectorAll(".logo-letter");
+      logo.addEventListener("mouseenter", () => {
+        logoLetters.forEach((letter, index) => {
+          letter.style.animation = "upDown 0.6s ease-in-out";
+          letter.style.animationDelay = `${0.1 * index}s`;
+        });
+        // 在一定時間後停止動畫
+        setTimeout(() => {
+          logoLetters.forEach((letter, index) => {
+            letter.style.animation = "";
+            letter.style.animationDelay = "";
+          });
+        }, 1400);
+      });
+    </script>
   </body>
 </html>
