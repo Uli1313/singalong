@@ -3,9 +3,10 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 400px;
+  // height: 400px;
+  height: 40vh;
   @include bg-cover("/assets/images/subbanner.png");
-  animation: scale 8s linear forwards;
+  // animation: scale 8s linear forwards;
 }
 .subbanner {
   height: 40vh;

@@ -924,7 +924,7 @@ $form-check-input-border: 1px solid rgba($black, 0.25) !default;
 $form-check-input-border-radius: 0.25em !default;
 $form-check-radio-border-radius: 50% !default;
 $form-check-input-focus-border: $input-focus-border-color !default;
-$form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$form-check-input-focus-box-shadow: none; // custom $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color: $component-active-color !default;
 $form-check-input-checked-bg-color: $component-active-bg !default;
@@ -1094,8 +1094,8 @@ $form-validation-states: (
 $zindex-dropdown: 1000 !default;
 $zindex-sticky: 1020 !default;
 $zindex-fixed: 1030 !default;
-$zindex-offcanvas-backdrop: 1040 !default;
-$zindex-offcanvas: 1045 !default;
+$zindex-offcanvas-backdrop: 1105; // custom 1040 !default;
+$zindex-offcanvas: 1110; // custom 1045 !default;
 $zindex-modal-backdrop: 1050 !default;
 $zindex-modal: 1055 !default;
 $zindex-popover: 1070 !default;
@@ -1200,7 +1200,7 @@ $dropdown-link-hover-color: shade-color($dropdown-link-color, 10%) !default;
 $dropdown-link-hover-bg: transparent; // custom  $gray-200 !default;
 
 $dropdown-link-active-color: $component-active-color !default;
-$dropdown-link-active-bg: $component-active-bg !default;
+$dropdown-link-active-bg: transparent; // custom $component-active-bg !default;
 
 $dropdown-link-disabled-color: $gray-500 !default;
 
@@ -1644,8 +1644,8 @@ $btn-close-padding-x: 0.25em !default;
 $btn-close-padding-y: $btn-close-padding-x !default;
 $btn-close-color: $black !default;
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
-$btn-close-focus-shadow: $input-btn-focus-box-shadow !default;
-$btn-close-opacity: 0.5 !default;
+$btn-close-focus-shadow: none; // custom $input-btn-focus-box-shadow !default;
+$btn-close-opacity: 1; // custom 0.5 !default;
 $btn-close-hover-opacity: 0.75 !default;
 $btn-close-focus-opacity: 1 !default;
 $btn-close-disabled-opacity: 0.25 !default;
@@ -1657,13 +1657,13 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y: $modal-inner-padding !default;
 $offcanvas-padding-x: $modal-inner-padding !default;
-$offcanvas-horizontal-width: 400px !default;
+$offcanvas-horizontal-width: 260px; // custom 400px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
-$offcanvas-border-color: $modal-content-border-color !default;
-$offcanvas-border-width: $modal-content-border-width !default;
+$offcanvas-border-color: $primary-light; // custom $modal-content-border-color !default;
+$offcanvas-border-width: 2px; // custom $modal-content-border-width !default;
 $offcanvas-title-line-height: $modal-title-line-height !default;
-$offcanvas-bg-color: $modal-content-bg !default;
+$offcanvas-bg-color: $primary-dark; // custom $modal-content-bg !default;
 $offcanvas-color: $modal-content-color !default;
 $offcanvas-box-shadow: $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg: $modal-backdrop-bg !default;
