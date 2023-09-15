@@ -155,7 +155,12 @@
 }
 .fs-md-48 {
   @include media-breakpoint-up(md) {
-    font-size: 48px;
+    font-size: 48px !important;
+  }
+}
+.fs-sm-48 {
+  @include media-breakpoint-up(sm) {
+    font-size: 48px !important;
   }
 }
 .w-33 {

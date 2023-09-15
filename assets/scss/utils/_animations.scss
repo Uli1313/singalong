@@ -79,3 +79,12 @@
     stroke-dashoffset: 4440;
   }
 }
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
